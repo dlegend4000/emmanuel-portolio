@@ -49,21 +49,21 @@ export default function Home() {
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime="2025-04-11T00:00:00.000Z">April 11, 2025</time>
+                      <time dateTime="2025-04-11T00:00:00.000Z">April 12, 2025</time>
                     </dd>
                   </dl>
                   <div className="space-y-5 xl:col-span-4">
                     <div className="space-y-1">
                       <div>
                         <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                          <a className="text-gray-900 transition duration-500 ease-in-out hover:text-primary dark:text-gray-100 dark:hover:text-primary" href="/blog/Flow-And-Self">Flow and Self</a>
+                          <a className="text-gray-900 transition duration-500 ease-in-out hover:text-primary dark:text-gray-100 dark:hover:text-primary" href="/blog/Flow-And-Self">Me and Myself</a>
                         </h2>
                       </div>
                       <div className="flex flex-wrap">
                         <a className="mt-2 mr-3 rounded-lg border border-primary py-1 px-3 text-sm font-medium uppercase text-primary transition duration-500 ease-in-out hover:bg-primary hover:text-gray-100 dark:hover:text-gray-900" href="/tags/reflection">reflection</a>
                         <a className="mt-2 mr-3 rounded-lg border border-primary py-1 px-3 text-sm font-medium uppercase text-primary transition duration-500 ease-in-out hover:bg-primary hover:text-gray-100 dark:hover:text-gray-900" href="/tags/performance">performance</a>
                       </div>
-                      <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">A reflection on the flow state and the self.</div>
+                      <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">A personal website.</div>
                     </div>
                   </div>
                 </div>
