@@ -12,7 +12,7 @@ export default function Home() {
               Hi, I am <span className="text-primary">Emmanuel</span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              Welcome to My personal website and blog. I am a Software Engineer who is passionate about building things with amazing people. In my free time, I work on a variety of things, including Game Jams, Chess Engines, and other ad hoc projects.
+            Welcome to my personal website. I’m a Software Engineer with a passion for learning new things solving problems. Outside of work, I spend my time immersed in music, fashion, and traveling. I am constantly seeking new experiences and perspectives from around the world.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               I hope you find something interesting here.
@@ -26,13 +26,13 @@ export default function Home() {
 
           {/* Replacing button grid with profile picture */}
           <div className="flex items-center justify-center py-12">
-            <div className="rounded-lg overflow-hidden">
+            <div className="overflow-hidden shadow-lg rounded-full">
               <Image
                 src="/me.jpg" // <- Update this path to your profile image
                 alt="Profile picture of Emmanuel"
-                width={700}
+                width={960}
                 height={300}
-                className="rounded-lg object-cover w-[700px] h-[300px]"
+                className="object-cover w-[960px] h-[300px] rounded-full"
               />
             </div>
           </div>
