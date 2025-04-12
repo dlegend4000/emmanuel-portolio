@@ -24,54 +24,23 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
-              <div className="my-2 grid items-start gap-8">
-                <div className="group relative">
-                  <Link href="/projects">
-                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
-                      <span className="flex items-center space-x-5">
-                        <Image src="https://ext.same-assets.com/3801736898/2320907649.svg" alt="" width={20} height={25} className="w-5 h-6" />
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">What I built</span>
-                      </span>
-                      <span className="pl-6 text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">Projects&nbsp;→</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="my-2 grid items-start gap-8">
-                <div className="group relative">
-                  <Link href="/about">
-                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
-                      <span className="flex items-center space-x-5">
-                        <Image src="https://ext.same-assets.com/3801736898/1998606599.svg" alt="" width={26} height={26} className="w-6.5 h-6.5" />
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">About Me</span>
-                      </span>
-                      <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">Page&nbsp;→</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="my-2 grid items-start gap-8">
-                <div className="group relative">
-                  <a className="special-underline-new no-underline hover:text-gray-100 dark:hover:text-gray-100" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@henryli904">
-                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
-                      <span className="flex items-center space-x-5">
-                        <Image src="https://ext.same-assets.com/3801736898/1367661487.svg" alt="" width={26} height={26} className="w-6.5 h-6.5" />
-                        <span className="pr-6 text-gray-900 dark:text-gray-100">Videos&nbsp;&nbsp;&nbsp;</span>
-                      </span>
-                      <span className="pl-6 text-primary transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">Youtube&nbsp;→</span>
-                    </span>
-                  </a>
-                </div>
-              </div>
+          {/* Replacing button grid with profile picture */}
+          <div className="flex items-center justify-center py-12">
+            <div className="rounded-lg overflow-hidden">
+              <Image
+                src="/me.jpg" // <- Update this path to your profile image
+                alt="Profile picture of Emmanuel"
+                width={700}
+                height={300}
+                className="rounded-lg object-cover w-[700px] h-[300px]"
+              />
             </div>
           </div>
         </div>
 
         <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">Latest</h2>
+
+        {/* Blog section remains unchanged */}
         <ul>
           <a className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800" href="/blog/Flow-And-Self">
             <li className="py-6">
