@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="mb-2 hidden text-sm text-gray-500 dark:text-gray-400 md:flex">
           <div className="mx-1">
             <Link className="link-underline" href="https://henryli.dev" target="_blank" rel="noopener noreferrer">
-              Henry Li © 2025
+              Emmanuel Karibiye © 2025
             </Link>
           </div>
           •
