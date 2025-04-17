@@ -17,15 +17,7 @@ export default function ContactPage() {
           <div className="flex flex-wrap gap-4">
             <a
               className="flex items-center rounded-lg border border-gray-200 p-6 transition-all hover:border-primary hover:bg-gray-100 dark:border-gray-800 dark:hover:border-primary dark:hover:bg-gray-800"
-              href="https://twitter.com/yellowdragoon1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="text-xl font-semibold">Twitter</div>
-            </a>
-            <a
-              className="flex items-center rounded-lg border border-gray-200 p-6 transition-all hover:border-primary hover:bg-gray-100 dark:border-gray-800 dark:hover:border-primary dark:hover:bg-gray-800"
-              href="https://github.com/yellowdragoon"
+              href="https://github.com/dlegend4000"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -33,7 +25,7 @@ export default function ContactPage() {
             </a>
             <a
               className="flex items-center rounded-lg border border-gray-200 p-6 transition-all hover:border-primary hover:bg-gray-100 dark:border-gray-800 dark:hover:border-primary dark:hover:bg-gray-800"
-              href="https://www.linkedin.com/in/henry-li-165860193/"
+              href="https://www.linkedin.com/in/emmanuel-karibiye-509b9a1b3/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -41,7 +33,7 @@ export default function ContactPage() {
             </a>
             <a
               className="flex items-center rounded-lg border border-gray-200 p-6 transition-all hover:border-primary hover:bg-gray-100 dark:border-gray-800 dark:hover:border-primary dark:hover:bg-gray-800"
-              href="mailto:henryli904@gmail.com"
+              href="mailto:emmanuelkaribiye31@@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
