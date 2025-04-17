@@ -5,6 +5,22 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const projects = [
     {
+      title: "Personal Portfolio",
+      description: "This game is the repo for my personal website and portfolio!",
+      tags: ["next.js", "Typescript", "Vercel"],
+      github: "https://github.com/dlegend4000/emmanuel-portolio",
+      external: null,
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+    {
+      title: "Travel Web App",
+      description: "This is a web app made for a service to book private and quick check-in into Nigeria.",
+      tags: ["React", "Javascript", "Vercel"],
+      github: "https://github.com/dlegend4000/first-priority-app",
+      external: "https://first-priority-app.vercel.app/",
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+    {
       title: "Cloud computing Research",
       description: "This project is primarily for the software portion of a larger mission to explore the feasibiity of using industrial computers in industrial internet of things through cloud computing using procaaso, a platform created by scri-is",
       tags: ["Python", "Procaaso", "Poetry"],
@@ -20,22 +36,7 @@ export default function ProjectsPage() {
       external: "https://qd4apx9xgmxk4xfw7mbn2y.streamlit.app/",
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
     },
-    {
-      title: "Personal Portfolio",
-      description: "This game is the repo for my personal website and portfolio!",
-      tags: ["next.js", "Typescript", "Vercel"],
-      github: "https://github.com/dlegend4000/emmanuel-portolio",
-      external: null,
-      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
-    },
-    {
-      title: "Travel Web App",
-      description: "This is a web app made for a service to book private and quick check-in into Nigeria.",
-      tags: ["React", "Javascript", "Vercel"],
-      github: "https://first-priority-app.vercel.app/",
-      external: null,
-      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
-    },
+    
   ];
 
   return (
