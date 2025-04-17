@@ -16,14 +16,14 @@ export default function Home() {
               Hi, I am <span className="text-primary">Emmanuel</span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-            Welcome to my personal website. I’m a Software Engineer with a passion for learning new things solving problems. Outside of work, I spend my time immersed in music, fashion, and traveling. I am constantly seeking new experiences and perspectives from around the world.
+            Welcome to my personal website and blog. I’m a Software Engineer with a passion for learning new things solving problems. Outside of work, I spend my time immersed in music, fashion, and traveling. I am constantly seeking new experiences and perspectives from around the world.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-              I hope you find something interesting here.
+              You might just find something worthwhile.
               <span> Thank you for visiting!</span>
             </p>
             <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              I hope you find something interesting here.
+              You might just find something worthwhile.
               <span> Thank you for visiting!</span>
             </p>
           </div>
