@@ -1,8 +1,12 @@
 import Layout from "@/components/layout";
 import Link from "next/link";
 import Image from "next/image";
+import { blogPosts } from "@/content/blog-data";
 
 export default function Home() {
+
+    // Get the latest 3 blog posts
+    const latestPosts = blogPosts.slice(0, 3);
   return (
     <Layout>
       <div>
@@ -38,38 +42,58 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">Latest</h2>
+        {/* Latest Posts Section */}
+        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+          Latest
+        </h2>
 
-        {/* Blog section remains unchanged */}
         <ul>
-          <a className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800" href="/blog/Flow-And-Self">
-            <li className="py-6">
-              <article>
-                <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime="2025-04-11T00:00:00.000Z">April 12, 2025</time>
-                    </dd>
-                  </dl>
-                  <div className="space-y-5 xl:col-span-4">
-                    <div className="space-y-1">
-                      <div>
-                        <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                          <a className="text-gray-900 transition duration-500 ease-in-out hover:text-primary dark:text-gray-100 dark:hover:text-primary" href="/blog/Flow-And-Self">Me and Myself</a>
-                        </h2>
+          {latestPosts.map((post) => (
+            <li key={post.slug} className="py-6">
+              <Link href={`/blog/${post.slug}`}>
+                <article>
+                  <div className="blog-post-card xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                    <dl>
+                      <dt className="sr-only">Published on</dt>
+                      <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
+                        <time dateTime={post.date}>
+                          {new Date(post.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </time>
+                      </dd>
+                    </dl>
+                    <div className="space-y-5 xl:col-span-4">
+                      <div className="space-y-1">
+                        <div>
+                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <span className="text-gray-900 transition duration-500 ease-in-out hover:text-primary dark:text-gray-100 dark:hover:text-primary">
+                              {post.title}
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="flex flex-wrap">
+                          {post.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="blog-tag"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
+                          {post.summary}
+                        </div>
                       </div>
-                      <div className="flex flex-wrap">
-                        <a className="mt-2 mr-3 rounded-lg border border-primary py-1 px-3 text-sm font-medium uppercase text-primary transition duration-500 ease-in-out hover:bg-primary hover:text-gray-100 dark:hover:text-gray-900" href="/tags/reflection">reflection</a>
-                        <a className="mt-2 mr-3 rounded-lg border border-primary py-1 px-3 text-sm font-medium uppercase text-primary transition duration-500 ease-in-out hover:bg-primary hover:text-gray-100 dark:hover:text-gray-900" href="/tags/performance">performance</a>
-                      </div>
-                      <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">A personal website.</div>
                     </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             </li>
-          </a>
+          ))}
         </ul>
         <div className="flex justify-end pt-5 text-lg font-normal leading-6">
           <a className="special-underline text-primary hover:text-gray-100 hover:no-underline dark:text-primary hover:dark:text-gray-100" aria-label="all posts" href="/blog">All Posts →</a>
