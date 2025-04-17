@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function BlogPage() {
   const blogPosts = [
     {
-      title: "Flow and Self",
-      date: "April 11, 2025",
+      title: "Me and Myself",
+      date: "April 17, 2025",
       dateTime: "2025-04-11T00:00:00.000Z",
-      slug: "Flow-And-Self",
-      summary: "A reflection on the flow state and the self.",
+      slug: "Me-And-Myelf",
+      summary: "A reflection of where I am at and where I am going.",
       tags: [
         { name: "reflection", href: "/tags/reflection" },
         { name: "performance", href: "/tags/performance" },
