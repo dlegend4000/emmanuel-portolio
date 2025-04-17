@@ -28,7 +28,7 @@ export default function MobileMenu() {
   };
 
   return (
-    <div className="relative z-10 inline-block text-left ml-2">
+    <div className="relative z-50 inline-block text-left ml-2">
       <button
         className="ml-2 cursor-pointer rounded-full bg-zinc-300 ring-zinc-400 transition-all hover:bg-violet-400 hover:ring-1 dark:bg-zinc-700 dark:ring-violet-700 dark:hover:bg-violet-600"
         aria-label="Toggle List Menu"
