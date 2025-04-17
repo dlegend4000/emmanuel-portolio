@@ -14,50 +14,7 @@ export default function BlogPage() {
         { name: "performance", href: "/tags/performance" },
       ],
     },
-    {
-      title: "Chinese Parenting",
-      date: "March 31, 2025",
-      dateTime: "2025-03-31T00:00:00.000Z",
-      slug: "Chinese-Parenting",
-      summary: "An exploration on the cause and effect of Chinese parenting on children.",
-      tags: [
-        { name: "reflection", href: "/tags/reflection" },
-        { name: "parenting", href: "/tags/parenting" },
-      ],
-    },
-    {
-      title: "Programming Chess Engines Part 1",
-      date: "March 22, 2025",
-      dateTime: "2025-03-22T00:00:00.000Z",
-      slug: "Programming-Chess_Engines-Part-1",
-      summary: "Part 1 of my blog series on programming chess engines from the ground up. Focuses on game representation.",
-      tags: [
-        { name: "chess", href: "/tags/chess" },
-        { name: "technical", href: "/tags/technical" },
-        { name: "programming", href: "/tags/programming" },
-      ],
-    },
-    {
-      title: "Pure Potentiality",
-      date: "March 14, 2025",
-      dateTime: "2025-03-14T00:00:00.000Z",
-      slug: "Pure-Potentiality",
-      summary: "An exploration of the bounds of human potential.",
-      tags: [
-        { name: "reflection", href: "/tags/reflection" },
-        { name: "career", href: "/tags/career" },
-      ],
-    },
-    {
-      title: "A Fragile Ego",
-      date: "March 10, 2025",
-      dateTime: "2025-03-10T00:00:00.000Z",
-      slug: "A-Fragile-Ego",
-      summary: "A personal reflection of the role ego plays in my life.",
-      tags: [
-        { name: "reflection", href: "/tags/reflection" },
-      ],
-    },
+    
   ];
 
   return (
