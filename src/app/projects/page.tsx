@@ -15,9 +15,9 @@ export default function ProjectsPage() {
     {
       title: "Travel Web App",
       description: "This is a web app made for a service to book private and quick check-in into Nigeria.",
-      tags: ["React", "Javascript", "Vercel"],
-      github: "https://github.com/dlegend4000/first-priority-app",
-      external: "https://first-priority-app.vercel.app/",
+      tags: ["React", "Typescript", "Vercel"],
+      github: "https://github.com/dlegend4000/first-priority-travel-app",
+      external: "https://first-priority-travel-app.vercel.app/",
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
     },
     {
