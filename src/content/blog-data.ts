@@ -51,6 +51,37 @@ It’s Day One.
 
       `,
     },
+
+    {
+      title: "Roots & Rhythm",
+      date: "2025-06-10",
+      slug: "roots-and-rhythm",
+      tags: ["CREATIVITY", "TECHNOLOGY", "MUSIC"],
+      summary: "Where code meets chord progressions.",
+      content: `
+          Some things don’t show up on a resume, but they show up in your rhythm.
+
+      Like the late nights teaching myself to play instruments — one chord at a time, no teacher, just intuition and curiosity. Or learning to rap not because I had to, but because something about turning feelings into sound felt like freedom. I wasn’t chasing perfection, just connection. A few songs found their way out. Nothing viral, nothing polished. Just honest.
+
+      Parallel to that was my other fascination: tech. Anyone who’s seen my feed knows it’s been there all along — the building, the breaking, the debugging, the joy of making something work that didn’t before. I’ve always believed that code and creativity aren’t opposites. They’re partners.
+
+      And now, the two threads are finally meeting.
+
+      Release Day isn’t live yet. The app is still under construction. But the vision? That’s very real. It’s about giving artists tools that feel like teammates. Solving the release-day chaos with something intelligent, intuitive, and artist-first. 
+
+      I’m not launching a product just to launch. I’m building something I would’ve needed when I was uploading tracks without a plan. I’m building something for the artist who creates from love, not from label pressure — but still wants a way to do it right.
+
+      This is just the beginning. A web app. A quiet rollout. Maybe even a few bugs (we’ll fix those). But it’s the start of something that blends what I know, what I love, and what I believe can help.
+
+      The interface is digital.
+      But the reason is deeply human.
+
+      And that’s why this matters.
+
+      Day One is coming.
+
+      `,
+    },
   
   ];
   
