@@ -59,9 +59,7 @@ It’s Day One.
       tags: ["CREATIVITY", "TECHNOLOGY", "MUSIC"],
       summary: "Where code meets chord progressions.",
       content: `
-          Some things don’t show up on a resume, but they show up in your rhythm.
-
-      Like the late nights teaching myself to play instruments — one chord at a time, no teacher, just intuition and curiosity. Or learning to rap not because I had to, but because something about turning feelings into sound felt like freedom. I wasn’t chasing perfection, just connection. A few songs found their way out. Nothing viral, nothing polished. Just honest.
+          Some things don’t show up on a resume, like the late nights teaching myself to play instruments. One chord at a time, no teacher, just intuition and curiosity. Or learning to rap not because I had to, but because something about turning feelings into sound felt like freedom. I wasn’t chasing perfection, just connection. A few songs found their way out. Nothing viral, nothing polished. Just honest.
 
       Parallel to that was my other fascination: tech. Anyone who’s seen my feed knows it’s been there all along — the building, the breaking, the debugging, the joy of making something work that didn’t before. I’ve always believed that code and creativity aren’t opposites. They’re partners.
 
