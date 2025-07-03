@@ -12,7 +12,7 @@ const highlights = [
   },
   {
     title: "2nd Place - JP Morgan Hackathon",
-    description: "Achieved 2nd place in the JP Morgan Hackathon, competing with top student teams.",
+    description: "Achieved 2nd place in the JP Morgan Hackathon, competing with Jp Morgan staff teams.",
   },
   {
     title: "JP Morgan Software Engineering Internship",
