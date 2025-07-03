@@ -73,12 +73,6 @@ export default function Home() {
                                 >
                                     Visit CallCrewAI
                                 </a>
-                                <a
-                                    href="/contact"
-                                    className="inline-block rounded bg-gray-700 px-6 py-2 text-white font-semibold shadow hover:bg-gray-800 transition"
-                                >
-                                    Contact
-                                </a>
                             </div>
                         </h2>
                         <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">

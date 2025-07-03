@@ -14,7 +14,7 @@ export default function ClientBody({
   // Remove any extension-added classes during hydration
   useEffect(() => {
     // This runs only on the client after hydration
-    document.body.className = "antialiased";
+    document.body.className = `${document.body.className} antialiased`;
     setMounted(true);
   }, []);
 
@@ -30,15 +30,11 @@ export default function ClientBody({
 
   if (!mounted) {
     return (
-      <body className="antialiased">
-        {children}
-      </body>
+      <>{children}</>
     );
   }
 
   return (
-    <body className="antialiased bg-background text-foreground dark:bg-background-color dark:text-white" suppressHydrationWarning>
-      {children}
-    </body>
+    <>{children}</>
   );
 }
