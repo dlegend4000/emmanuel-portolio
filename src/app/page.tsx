@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/content/blog-data";
 import AchievementsGrid from "@/components/AchievementsGrid";
+import Highlights from "@/components/Highlights";
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
@@ -90,6 +91,9 @@ export default function Home() {
 
                 {/* Achievements Section */}
                 <AchievementsGrid />
+
+                {/* Highlights Section */}
+                <Highlights />
 
                 {/* Latest Posts Section */}
                 <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
