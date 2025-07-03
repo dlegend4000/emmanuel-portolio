@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "./theme-toggle";
 import { useState, useEffect } from "react";
 import MobileMenu from "./mobile-menu";
 
@@ -74,8 +73,6 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-
-        {/* <ThemeToggle /> */}
 
         <MobileMenu />
 

@@ -28,11 +28,12 @@ export default function RootLayout({
     <html 
       lang="en" 
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Providers>
-          <ClientBody>{children}</ClientBody>
-        </Providers>
-
+      className="dark">
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <Providers>
+            <ClientBody>{children}</ClientBody>
+          </Providers>
+        </body>
     </html>
   );
 }

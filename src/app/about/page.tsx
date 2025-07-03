@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
             <p>
               <span>
-                Hi, I’m Emmanuel Karibiye, a Software Engineer based in Dublin, Ireland. I’m passionate about many areas of Computer Science, especially Fullstack Development, Reinforcement Learning, and Game Development. I enjoy exploring how tech intersects with creativity and real world problems. My most recent role was as a Software engineering intern ensuring data intergrity at{" "}
+                Hi, I'm Emmanuel Karibiye, a Software Engineer based in Dublin, Ireland. I'm passionate about many areas of Computer Science, especially Fullstack Development, Reinforcement Learning, and Game Development. I enjoy exploring how tech intersects with creativity and real world problems. My most recent role was as a Software engineering intern ensuring data intergrity at{" "}
                 <a
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                   target="_blank"
@@ -54,9 +54,9 @@ export default function AboutPage() {
             <hr className="my-6 border-t border-gray-300 dark:border-gray-700" />
 
             <p className="sm:block md:block lg:block">
-            Outside of work, I’m really into fashion, music, and sports. I play both piano and guitar, and I never miss a chance to get out on the football pitch. These interests keep me balanced and constantly inspired in different ways.
+            Outside of work, I'm really into fashion, music, and sports. I play both piano and guitar, and I never miss a chance to get out on the football pitch. These interests keep me balanced and constantly inspired in different ways.
 
-            Right now, I’m in the early stages of developing an exciting new app idea. it’s still under wraps, but I’m looking forward to sharing more soon.
+            Right now, I'm in the early stages of developing an exciting new app idea. it's still under wraps, but I'm looking forward to sharing more soon.
             </p>
 
             <hr className="my-6 border-t border-gray-300 dark:border-gray-700" />
@@ -102,6 +102,45 @@ export default function AboutPage() {
             </h1>
           </div>
           <div className="max-w-none pt-8 pb-8 xl:col-span-2">
+            <div className="my-3">
+              <div className="flex flex-row text-xl">
+                <span className="text-gray-500 dark:text-gray-400">Production Engineer Fellow</span>{" "}
+                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
+                <span className="text-primary">
+                  <a
+                    className="company"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://fellowship.mlh.io/"
+                  >
+                    Meta X MLH
+                  </a>
+                </span>
+              </div>
+              <div>
+                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
+                  June 2025 - Present
+                </div>
+                <div className="p-2">
+                  <div className="flex flex-row ">
+                    <div className="mr-2 text-lg text-primary"> ‣</div>
+                    <div className="text-gray-500 dark:text-gray-400">
+                      I do production engineer projects under the guidance of mentors and Meta engineers.
+                    </div>
+                  </div>
+                  <div className="flex flex-row ">
+                    <div className="mr-2 text-lg text-primary"> ‣</div>
+                    <div className="text-gray-500 dark:text-gray-400">
+                      Less than a 2.5% acceptance rate.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
+                ~~~
+              </div>
+            </div>
+
             <div className="my-3">
               <div className="flex flex-row text-xl">
                 <span className="text-gray-500 dark:text-gray-400">Software Engineering Intern | Data Integrity</span>{" "}
