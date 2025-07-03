@@ -64,7 +64,7 @@ export default function Home() {
                         </h1>
                         <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
                             Co-founder of CallCrewAI.
-                            <div className="mt-4">
+                            <div className="mt-4 flex gap-4">
                                 <a
                                     href="https://www.callcrew-ai.com/"
                                     target="_blank"
@@ -72,6 +72,12 @@ export default function Home() {
                                     className="inline-block rounded bg-primary px-6 py-2 text-white font-semibold shadow hover:bg-primary/80 transition"
                                 >
                                     Visit CallCrewAI
+                                </a>
+                                <a
+                                    href="/contact"
+                                    className="inline-block rounded bg-gray-700 px-6 py-2 text-white font-semibold shadow hover:bg-gray-800 transition"
+                                >
+                                    Contact
                                 </a>
                             </div>
                         </h2>
