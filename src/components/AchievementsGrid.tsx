@@ -8,7 +8,7 @@ const achievements = [
     details: "Won 1st place at the NDRC founders weekend hackathon that took place in june 2025",
   },
   {
-    title: "$1M+ Impact 📈",
+    title: "$100M+ Impact 📈",
     details: "At JP Morgan I made a data integrity application that is now being used by clients.",
   },
   {
