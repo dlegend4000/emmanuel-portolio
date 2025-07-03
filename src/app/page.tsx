@@ -63,7 +63,17 @@ export default function Home() {
                             )}
                         </h1>
                         <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-                            Welcome to my personal website and blog. I'm a Software Engineer with a passion for learning new things solving problems. Outside of work, I spend my time immersed in music, fashion, and traveling. I am constantly seeking new experiences and perspectives from around the world.
+                            Co-founder of CallCrewAI.
+                            <div className="mt-4">
+                                <a
+                                    href="https://www.callcrew-ai.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block rounded bg-primary px-6 py-2 text-white font-semibold shadow hover:bg-primary/80 transition"
+                                >
+                                    Visit CallCrewAI
+                                </a>
+                            </div>
                         </h2>
                         <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
                             You might just find something worthwhile.
@@ -76,14 +86,14 @@ export default function Home() {
                     </div>
 
                     {/* Replacing button grid with profile picture */}
-                    <div className="flex items-center justify-center py-12">
-                        <div className="overflow-hidden shadow-lg rounded-full">
+                    <div className="flex items-center justify-center py-12 xl:ml-auto">
+                        <div className="overflow-hidden shadow-lg rounded-full w-[300px] h-[300px]">
                             <Image
                                 src="/me.jpg" // <- Update this path to your profile image
                                 alt="Profile picture of Emmanuel"
-                                width={960}
+                                width={300}
                                 height={300}
-                                className="object-cover w-[960px] h-[300px] rounded-full"
+                                className="object-cover w-[300px] h-[300px] rounded-full"
                             />
                         </div>
                     </div>
