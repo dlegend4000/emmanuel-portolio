@@ -69,7 +69,7 @@ export default function Home() {
                                     href="https://www.callcrew-ai.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-block rounded bg-primary px-6 py-2 text-white font-semibold shadow hover:bg-primary/80 transition"
+                                    className="inline-block rounded bg-background border border-primary px-6 py-2 text-primary font-semibold shadow transition hover:bg-primary hover:border-primary hover:text-white"
                                 >
                                     Visit CallCrewAI
                                 </a>
