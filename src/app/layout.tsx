@@ -29,11 +29,14 @@ export default function RootLayout({
       lang="en" 
       suppressHydrationWarning
       className="dark">
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
-          <Providers>
-            <ClientBody>{children}</ClientBody>
-          </Providers>
-        </body>
+      <head>
+        <link rel="icon" href="/EK.png" type="image/png" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Providers>
+          <ClientBody>{children}</ClientBody>
+        </Providers>
+      </body>
     </html>
   );
 }
