@@ -4,7 +4,7 @@ import React from "react";
 const highlights = [
   {
     title: "Co-founded CallCrewAI",
-    description: "Co-founded CallCrewAi (formerly Tradesmate) and won the NDRC Founders Weekend Hackathon with the idea.",
+    description: "Co-founded CallCrewAI (formerly Tradesmate) and won the NDRC Founders Weekend Hackathon with the idea.",
   },
   {
     title: "Meta X MLH Fellowship",
