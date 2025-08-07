@@ -17,13 +17,13 @@ export interface BlogPost {
       content: `
         Summer doesn't always feel like momentum. But this one does.
 
-        It started with a win — CallCrewAI (formerly Tradesmate) took first place at the NDRC Accelerator Hackathon. What began as a spark of an idea between me and my co-founder, Adelin, quickly turned into something real. We built it from scratch — no roadmap, just conviction. Now we've got actual users. Real feedback. Paying customers. Every message that says "this helped" is proof we're building something that matters.
+        It started with a win. CallCrewAI (formerly Tradesmate) took first place at the NDRC Accelerator Hackathon. What began as a spark of an idea between me and my good friend and co-founder, Adelin, quickly turned into something real. We built it from scratch, no roadmap, just conviction. Now we've got actual users. Real feedback. Paying customers. Every message that says "this helps" is proof we're building something that matters.
 
-        The journey from hackathon pitch to functioning product has been equal parts chaos and clarity. We've learned more than we thought we would — about product, about people, and about ourselves. And we're still learning. Every day.
+        The journey from hackathon pitch to functioning product has been equal parts chaos and clarity. We've learned more than we thought we would about product, about people, and about ourselves. And we're still learning. Every day.
 
-        In parallel, I've been deepening my foundation in production engineering — thanks to the MLH Fellowship and mentorship from engineers at Meta. Linux, containerization, monitoring, automation — all the nuts and bolts that make ideas run. It's been humbling and empowering to see how the infrastructure side of tech isn't just the background — it is the stage.
+        In parallel, I've been deepening my foundation in production engineering thanks to the MLH Fellowship and mentorship from engineers at Meta. Linux, containerization, monitoring, automation and so on, all the nuts and bolts that make ideas run. It's been humbling and empowering to see how the infrastructure side of tech isn't just the background, it is the stage.
 
-        Meanwhile, Release Day — the other project close to my heart — is almost there. 85% done and counting. The vision hasn't changed: it's still about giving independent artists the tools they deserve. Tools that don't feel like workarounds. Tools that understand. I've been pouring everything into it — design, logic, late-night debugging sessions — not because I have to, but because I believe in the mission.
+        Meanwhile, Release Day, the other project close to my heart is almost there. 85% done and counting. The vision hasn't changed: it's still about giving independent artists the tools they deserve. Tools that don't feel like workarounds. Tools that understand. I've been pouring everything into it: design, logic, late-night debugging sessions not because I have to, but because I believe in the mission.
 
         This isn't just about shipping features or chasing trends. It's about building things I wish existed when I needed them. Whether it's a platform for musicians or a smart assistant for service businesses, the common thread is clear:
         Make things that matter. Make things that last.
