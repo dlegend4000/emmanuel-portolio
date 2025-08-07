@@ -9,17 +9,46 @@ export interface BlogPost {
   
   export const blogPosts: BlogPost[] = [
     {
+      title: "Build Season",
+      date: "2025-08-07",
+      slug: "build-season",
+      tags: ["STARTUPS", "TECHNOLOGY", "CREATIVITY"],
+      summary: "Summer doesn't always feel like momentum. But this one does.",
+      content: `
+        Summer doesn't always feel like momentum. But this one does.
+
+        It started with a win — CallCrewAI (formerly Tradesmate) took first place at the NDRC Accelerator Hackathon. What began as a spark of an idea between me and my co-founder, Adelin, quickly turned into something real. We built it from scratch — no roadmap, just conviction. Now we've got actual users. Real feedback. Paying customers. Every message that says "this helped" is proof we're building something that matters.
+
+        The journey from hackathon pitch to functioning product has been equal parts chaos and clarity. We've learned more than we thought we would — about product, about people, and about ourselves. And we're still learning. Every day.
+
+        In parallel, I've been deepening my foundation in production engineering — thanks to the MLH Fellowship and mentorship from engineers at Meta. Linux, containerization, monitoring, automation — all the nuts and bolts that make ideas run. It's been humbling and empowering to see how the infrastructure side of tech isn't just the background — it is the stage.
+
+        Meanwhile, Release Day — the other project close to my heart — is almost there. 85% done and counting. The vision hasn't changed: it's still about giving independent artists the tools they deserve. Tools that don't feel like workarounds. Tools that understand. I've been pouring everything into it — design, logic, late-night debugging sessions — not because I have to, but because I believe in the mission.
+
+        This isn't just about shipping features or chasing trends. It's about building things I wish existed when I needed them. Whether it's a platform for musicians or a smart assistant for service businesses, the common thread is clear:
+        Make things that matter. Make things that last.
+
+        Summer's not over, but it's already been one for the books.
+
+        The products are digital.
+
+        But the energy? All human.
+
+        More soon.
+      `,
+    },
+    {
       title: "Me and Myself",
       date: "2025-04-17",
       slug: "Me-And-Myself",
       tags: ["REFLECTION", "PERFORMANCE"],
       summary: "A reflection on where I am now and where I am going.",
       content: `
-        It’s a quiet evening, the kind where thoughts run deeper than usual. The kind where “me” and “myself” sit across from each other and talk about the journey so far.
+        It's a quiet evening, the kind where thoughts run deeper than usual. The kind where "me" and "myself" sit across from each other and talk about the journey so far.
 A few years ago, we chose the path of gears and gradients, of thermodynamics and tensile stress. Mechanical Engineering. A discipline grounded in logic, defined by motion. And though we walked it with pride, another rhythm played quietly in the background: the click of a keyboard, the soft hum of a terminal window, the satisfaction of solving problems not with spanners, but with syntax.
-Now, as final year exams loom on the horizon like the last mountain in a long trek, there’s a strange calm. Not because the road was easy but because the next chapter feels true.
+Now, as final year exams loom on the horizon like the last mountain in a long trek, there's a strange calm. Not because the road was easy but because the next chapter feels true.
 This summer, we begin again but not from scratch. From intention.
-We’ll write code not to finish an assignment or solely to pass an interview, but to understand. To build. To break. To rebuild.
+We'll write code not to finish an assignment or solely to pass an interview, but to understand. To build. To break. To rebuild.
 
       `,
     },
