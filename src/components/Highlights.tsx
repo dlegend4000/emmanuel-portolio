@@ -7,6 +7,10 @@ const highlights = [
     description: "Co-founded CallCrewAI (formerly Tradesmate) and won the NDRC Founders Weekend Hackathon with the idea.",
   },
   {
+    title: "National AI Hackathon Finalist",
+    description: "Built the world's first Irish speaking AI, pioneering natural language processing for the Irish language.",
+  },
+  {
     title: "Meta X MLH Fellowship",
     description: "Selected as a Production Engineer Fellow at Meta X MLH. Less than 2.5% acceptance rate.",
   },
@@ -19,8 +23,8 @@ const highlights = [
     description: "Received a Software Engineering Internship offer from JP Morgan.",
   },
   {
-    title: "Amazon Fleet Remediation Engineering Internship Offer",
-    description: "Received an Engineering Internship offer from Amazon for their Fleet Remediation team.",
+    title: "Amazon Internship Offer",
+    description: "Received an Engineering Internship offer from Amazon.",
   },
 ];
 

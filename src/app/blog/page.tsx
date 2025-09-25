@@ -16,6 +16,11 @@ export default function BlogPage() {
     return searchContent.toLowerCase().includes(searchValue.toLowerCase());
   });
 
+  // Sort by date (newest first)
+  const sortedBlogPosts = [...filteredBlogPosts].sort(
+    (a: BlogPost, b: BlogPost) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <Layout>
       <div className="mx-auto max-w-6xl divide-y divide-gray-400">
@@ -49,11 +54,11 @@ export default function BlogPage() {
         </div>
 
         <ul>
-          {!filteredBlogPosts.length && (
+          {!sortedBlogPosts.length && (
             <p className="py-4 text-center">No posts found.</p>
           )}
 
-          {filteredBlogPosts.map((post: BlogPost) => (
+          {sortedBlogPosts.map((post: BlogPost) => (
             <li key={post.slug} className="py-6">
               <Link href={`/blog/${post.slug}`} className="post-container">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
