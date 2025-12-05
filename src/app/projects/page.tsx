@@ -5,19 +5,11 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Personal Portfolio",
-      description: "This game is the repo for my personal website and portfolio!",
-      tags: ["next.js", "Typescript", "Vercel"],
-      github: "https://github.com/dlegend4000/emmanuel-portolio",
-      external: null,
-      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
-    },
-    {
-      title: "Travel Web App",
-      description: "This is a web app made for a service to book private and quick check-in into Nigeria.",
-      tags: ["React", "Typescript", "Vercel"],
-      github: "https://github.com/dlegend4000/first-priority-travel-app",
-      external: "https://first-priority-travel-app.vercel.app/",
+      title: "QuickSat - LEO Marketplace",
+      description: "Commercialization of Low Earth Orbit (LEO). A marketplace platform where you can rent resources from satellites with real-time tracking and machine learning elements for predicted downtime.",
+      tags: ["Next.js", "TypeScript", "Firebase", "Express.js", "Machine Learning"],
+      github: "https://github.com/dlegend4000/nasa-space-apps-hackathon",
+      external: "https://quick-sat.web.app/",
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
     },
     {
@@ -28,6 +20,23 @@ export default function ProjectsPage() {
       external: null,
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
     },
+    {
+      title: "Personal Portfolio",
+      description: "This is the repo for my personal website and portfolio!",
+      tags: ["next.js", "Typescript", "Vercel"],
+      github: "https://github.com/dlegend4000/emmanuel-portolio",
+      external: null,
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+    {
+      title: "first Priority Travel",
+      description: "This is a web app made for a service to book private and quick check-in into Nigeria.",
+      tags: ["React", "Typescript", "Vercel"],
+      github: "https://github.com/dlegend4000/first-priority-travel-app",
+      external: "https://first-priority-travel-app.vercel.app/",
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+   
     {
       title: "Movie recommender web app",
       description: "Using machine learning and third party APIs this project is designed to help you find suitable movie recommendations.",

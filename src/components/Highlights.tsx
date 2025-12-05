@@ -3,6 +3,10 @@ import React from "react";
 
 const highlights = [
   {
+    title: "Became a Web Summit Scholar",
+    description: "Recognized for exceptional merit and personally selected by Web Summit CEO, Paddy Cosgrave",
+  },
+  {
     title: "Co-founded CallCrewAI",
     description: "Co-founded CallCrewAI (formerly Tradesmate) and won the NDRC Founders Weekend Hackathon with the idea.",
   },
@@ -24,7 +28,7 @@ const highlights = [
   },
   {
     title: "Amazon Internship Offer",
-    description: "Received an Engineering Internship offer from Amazon.",
+    description: "Received an Internship offer from Amazon.",
   },
 ];
 

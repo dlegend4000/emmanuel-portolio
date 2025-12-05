@@ -21,8 +21,8 @@ export default function AboutPage() {
               className="h-48 w-48 rounded-full xl:rounded-full"
             />
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">Emmanuel Karibiye</h3>
-            <div className="text-gray-500 dark:text-gray-400">Software Engineering Intern</div>
-            <div className="text-gray-500 dark:text-gray-400">Jp Morgan Chase & Co.</div>
+            <div className="text-gray-500 dark:text-gray-400">Co-founder & CTO</div>
+            <div className="text-gray-500 dark:text-gray-400">CallCrewAI</div>
             <div className="flex flex-col pt-3">
               <a
                 className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
@@ -39,15 +39,17 @@ export default function AboutPage() {
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
             <p>
               <span>
-                Hi, I'm Emmanuel Karibiye, a Software Engineer based in Dublin, Ireland. I'm passionate about many areas of Computer Science, especially Fullstack Development, Reinforcement Learning, and Game Development. I enjoy exploring how tech intersects with creativity and real world problems. My most recent role was as a Software engineering intern ensuring data intergrity at{" "}
+                Hi, I'm Emmanuel Karibiye, a Software Engineer based in Dublin, Ireland. I'm currently the Co-founder and CTO of{" "}
                 <a
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://jpmorganchase.com/ie"
+                  href="https://www.callcrew-ai.com/"
                 >
-                  Jp Morgan Chase & Co.
+                  CallCrewAI
                 </a>
+                , where we're building AI solutions to transform how trades, facilities, and field-service firms operate. I'm passionate about many areas of Computer Science, especially Artificial Intelligence, LLMS, Fullstack Development, Reinforcement Learning, UI/UX Design. I enjoy exploring how tech intersects with creativity and real world problems.
+
               </span>
             </p>
 
@@ -56,7 +58,7 @@ export default function AboutPage() {
             <p className="sm:block md:block lg:block">
             Outside of work, I'm really into fashion, music, and sports. I play both piano and guitar, and I never miss a chance to get out on the football pitch. These interests keep me balanced and constantly inspired in different ways.
 
-            Right now, I'm in the early stages of developing an exciting new app idea. it's still under wraps, but I'm looking forward to sharing more soon.
+           
             </p>
 
             <hr className="my-6 border-t border-gray-300 dark:border-gray-700" />
@@ -102,6 +104,51 @@ export default function AboutPage() {
             </h1>
           </div>
           <div className="max-w-none pt-8 pb-8 xl:col-span-2">
+            <div className="my-3">
+              <div className="flex flex-row text-xl">
+                <span className="text-gray-500 dark:text-gray-400">Co-founder & CTO</span>{" "}
+                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
+                <span className="text-primary">
+                  <a
+                    className="company"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.callcrew-ai.com/"
+                  >
+                    CallCrewAI
+                  </a>
+                </span>
+              </div>
+              <div>
+                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
+                  August 2025 - Present
+                </div>
+                <div className="p-2">
+                  <div className="flex flex-row ">
+                    <div className="mr-2 text-lg text-primary"> ‣</div>
+                    <div className="text-gray-500 dark:text-gray-400">
+                      Architecting and executing technical strategy for an AI-powered platform serving trades, facilities, and field-service businesses
+                    </div>
+                  </div>
+                  <div className="flex flex-row ">
+                    <div className="mr-2 text-lg text-primary"> ‣</div>
+                    <div className="text-gray-500 dark:text-gray-400">
+                      Leading full-stack development, infrastructure scaling, and AI/ML integration to deliver 24/7 automated solutions
+                    </div>
+                  </div>
+                  <div className="flex flex-row ">
+                    <div className="mr-2 text-lg text-primary"> ‣</div>
+                    <div className="text-gray-500 dark:text-gray-400">
+                      Driving product roadmap and technical decisions to scale from MVP to production platform with active paying customers
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
+                ~~~
+              </div>
+            </div>
+
             <div className="my-3">
               <div className="flex flex-row text-xl">
                 <span className="text-gray-500 dark:text-gray-400">Production Engineer Fellow</span>{" "}
