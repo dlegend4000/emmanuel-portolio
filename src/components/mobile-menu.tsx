@@ -74,6 +74,13 @@ export default function MobileMenu() {
               About
             </Link>
             <Link
+              href="/press"
+              className={`block px-4 py-2 text-sm ${isActive('/press') ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-white' : 'text-gray-700 dark:text-gray-300'}`}
+              role="menuitem"
+            >
+              Press
+            </Link>
+            <Link
               href="/contact"
               className={`block px-4 py-2 text-sm ${isActive('/contact') ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-white' : 'text-gray-700 dark:text-gray-300'}`}
               role="menuitem"

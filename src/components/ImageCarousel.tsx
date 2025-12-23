@@ -10,14 +10,9 @@ interface CarouselImage {
 
 const carouselImages: CarouselImage[] = [
   {
-    src: "/graduation.JPG",
-    alt: "Graduation",
-    description: "Celebrating my graduation",
-  },
-  {
     src: "/YC voice ai event.JPG",
     alt: "YC Voice AI Event",
-    description: "Attending Y Combinator Voice AI event",
+    description: "Invited to the Y Combinator X Gemini event",
   },
   {
     src: "/Boston dynamics ceo.png",
@@ -48,6 +43,11 @@ const carouselImages: CarouselImage[] = [
     src: "/shadowing cristiano Amon.png",
     alt: "Cristiano Amon",
     description: "Shadowing Cristiano Amon, Qualcomm CEO",
+  },
+  {
+    src: "/graduation.JPG",
+    alt: "Graduation",
+    description: "Graduation",
   },
 ];
 

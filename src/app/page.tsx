@@ -49,51 +49,6 @@ export default function Home() {
     return (
         <Layout>
             <div>
-                {/* Press Coverage Banner */}
-                <div className="mb-6 rounded-lg border-2 border-[#166534] dark:border-[#15803d] bg-transparent p-4 transition duration-300">
-                    <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-                        <div className="flex items-center gap-3">
-                            <svg
-                                className="h-5 w-5 text-primary"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                                />
-                            </svg>
-                            <span className="text-sm font-medium text-gray-900 dark:text-gray-100 sm:text-base">
-                                Press Coverage
-                            </span>
-                        </div>
-                        <Link
-                            href="/press"
-                            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                        >
-                            View Press Coverage
-                            <svg
-                                className="ml-2 h-4 w-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        </Link>
-                    </div>
-                </div>
-
                 <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
                     <div className="pt-6">
                         {/* Dummy element to ensure Tailwind includes these classes: opacity-100 opacity-0 translate-y-0 translate-y-4 */}

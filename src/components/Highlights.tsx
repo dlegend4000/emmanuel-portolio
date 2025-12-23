@@ -7,6 +7,18 @@ const highlights = [
     description: "Recognized for exceptional merit and personally selected by Web Summit CEO, Paddy Cosgrave",
   },
   {
+    title: "Shadowing Cristiano Amon (Qualcomm CEO)",
+    description: "I Shadowed Cristiano Amon for a day. We had interesting discussions about AI and edge processing",
+  },
+  {
+    title: "Working with Imogen Heap",
+    description: "Working with Imogen Heap, 2X Grammy winning artist on ai.mogen",
+  },
+  {
+    title: "Y Combinator Invitation",
+    description: "Not the full batch yet (for now) but just their YC X Gemini hackathon on pushing boundaries in voice AI",
+  },
+  {
     title: "Co-founded CallCrewAI",
     description: "Co-founded CallCrewAI (formerly Tradesmate) and won the NDRC Founders Weekend Hackathon with the idea.",
   },
@@ -15,7 +27,7 @@ const highlights = [
     description: "Built the world's first Irish speaking AI, pioneering natural language processing for the Irish language.",
   },
   {
-    title: "Meta X MLH Fellowship",
+    title: "Meta Fellow",
     description: "Selected as a Production Engineer Fellow at Meta X MLH. Less than 2.5% acceptance rate.",
   },
   {

@@ -5,7 +5,7 @@ import React from "react";
 const achievements = [
   {
     title: "Hackathon Winner 🏆",
-    details: "Won 1st place at the NDRC founders weekend hackathon that took place in june 2025",
+    details: "Won 1st place at the Elevenlabs hackathon 2025",
   },
   {
     title: "$100M+ Impact 📈",
@@ -21,7 +21,7 @@ const achievements = [
   },
   {
     title: "Startup Founder 🚀",
-    details: "Co-founded a startup that won us the NDRC founders weekend hackathon",
+    details: "Co-founded CallCrewAI, The Autopilot for trades and field service teams",
   },
   {
     title: "Mentorship 💡",
