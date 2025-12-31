@@ -9,6 +9,43 @@ export interface BlogPost {
   
   export const blogPosts: BlogPost[] = [
     {
+      title: "How do I Explain",
+      date: "2025-12-31",
+      slug: "how-do-i-explain",
+      tags: ["REFLECTION", "STARTUPS", "TECHNOLOGY"],
+      summary: "2025 feels like several lifetimes compressed into twelve months. A year of graduation, building, and doors opening.",
+      content: `
+        It's December 31st, and I'm sitting here trying to find the words.
+        Not because they don't exist, but because 2025 feels like several lifetimes compressed into twelve months. The kind of year that makes you pause and ask: did all of that really happen? To me?
+        
+        I graduated. That mountain we talked about climbing? We conquered it.
+        
+        Then things moved fast.
+        
+        I became a Meta Fellow. I won a couple hackathons. We built the world's first Irish-speaking AI, something that landed us as national finalists. And somewhere along the way, the code stopped being about proving ourselves to interviewers. It became about building things that actually mattered.
+        
+        In the middle of all that chaos, we started a company. Like, an actual company. With office space and everything. The NDRC pre-accelerator became our crash course in reality and learning to pitch your vision to people who've heard it all before.
+        
+        Then San Francisco happened. Walking into Y Combinator's office felt like stepping into startup mythology made real. Those walls have seen so many beginnings.
+        
+        Web Summit came next, and with it, being a Web Summit scholar opened doors I didn't even know existed. I got to shadow Cristiano Amon, Qualcomm's CEO, for an entire day, just watching how someone at that level thinks, moves and decides was inspiring. I met Imogen Heap. Two-time Grammy winner. And now we're collaborating on an AI project together, which still doesn't feel real when I say it out loud. There were founders and execs from Uber, Lovable, Twitter, Pinterest and many more. These conversations didn't just inspire me, they fundamentally changed how I see what's possible.
+        
+        And through it all, our first ARR milestone. Real revenue. Real traction. Real proof.
+        
+        How do I explain what this year was?
+        
+        I'm not sure I can. Not fully. Not yet.
+        
+        But as the clock counts down to midnight, one word rises above the noise: grateful.
+        
+        Grateful for the doors that opened. For the people who believed. For the courage to start when we didn't have all the answers.
+        
+        Here's to 2026. Whatever comes next, we're ready.
+        
+        Not from scratch. From momentum.
+      `,
+    },
+    {
       title: "Build Season",
       date: "2025-08-07",
       slug: "build-season",
