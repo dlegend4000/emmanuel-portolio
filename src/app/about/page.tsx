@@ -172,7 +172,7 @@ export default function AboutPage() {
                   <div className="flex flex-row ">
                     <div className="mr-2 text-lg text-primary"> ‣</div>
                     <div className="text-gray-500 dark:text-gray-400">
-                      I do production engineer projects under the guidance of mentors and Meta engineers.
+                      I did production engineer projects under the guidance of mentors and Meta engineers.
                     </div>
                   </div>
                   <div className="flex flex-row ">

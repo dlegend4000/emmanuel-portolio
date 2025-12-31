@@ -5,6 +5,30 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const projects = [
     {
+      title: "Music at the Speed of Thought",
+      description: "Advancing research in music models and eliminating the need for a producer by using your voice to modify songs in real time. This project pushes the boundaries of AI-powered music production, allowing artists to shape their sound through natural voice commands.",
+      tags: ["AI", "Music", "Machine Learning", "Real-time Processing", "Voice AI"],
+      github: "https://github.com/dlegend4000/gomar33",
+      external: "https://gomar33-cc75d.web.app/",
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+    {
+      title: "Worlds First Irish Speaking AI",
+      description: "Pioneered GlórAI, the world's first Irish-speaking voicebot for language learning. Reached the finals of TechIreland's National AI Challenge, advancing NLP for underrepresented languages and preserving cultural heritage through AI.",
+      tags: ["AI", "NLP", "Voice AI", "Irish Language", "Education"],
+      github: null,
+      external: "https://www.linkedin.com/posts/emma-murphy-38789115b_nationalaichallenge-ai-innovation-ugcPost-7374488313086365696-VvFc?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHU01kBP4J0gHejIpelbB572LGrBxS2eTw",
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+    {
+      title: "Release Day",
+      description: "A direct artist-fan marketplace revolutionizing music distribution. Artists monetize viral moments instantly with 85% revenue share, while fans get early access to exclusive tracks before they hit streaming. Building stronger artist-fan relationships through direct transactions.",
+      tags: ["Music", "Marketplace", "E-commerce", "Web App", "Artist Platform"],
+      github: null,
+      external: "https://www.releaseday.info/",
+      folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
+    },
+    {
       title: "QuickSat - LEO Marketplace",
       description: "Commercialization of Low Earth Orbit (LEO). A marketplace platform where you can rent resources from satellites with real-time tracking and machine learning elements for predicted downtime.",
       tags: ["Next.js", "TypeScript", "Firebase", "Express.js", "Machine Learning"],
@@ -29,9 +53,9 @@ export default function ProjectsPage() {
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
     },
     {
-      title: "first Priority Travel",
-      description: "This is a web app made for a service to book private and quick check-in into Nigeria.",
-      tags: ["React", "Typescript", "Vercel"],
+      title: "First Priority Travel",
+      description: "A streamlined travel booking platform designed to simplify travel to Nigeria with private and expedited check-in services. Built with modern web technologies to provide a seamless booking experience, reducing wait times and enhancing travel convenience for passengers.",
+      tags: ["React", "Typescript", "Vercel", "Travel", "E-commerce"],
       github: "https://github.com/dlegend4000/first-priority-travel-app",
       external: "https://first-priority-travel-app.vercel.app/",
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
@@ -39,8 +63,8 @@ export default function ProjectsPage() {
    
     {
       title: "Movie recommender web app",
-      description: "Using machine learning and third party APIs this project is designed to help you find suitable movie recommendations.",
-      tags: ["Machine Learning", "Python", "Streamlit"],
+      description: "An intelligent recommendation system using cosine similarity and collaborative filtering algorithms to analyze user preferences and movie features. Leverages machine learning techniques including vectorization and similarity metrics to deliver personalized movie suggestions through third-party APIs.",
+      tags: ["Machine Learning", "Python", "Streamlit", "Cosine Similarity", "Collaborative Filtering"],
       github: "https://github.com/dlegend4000/movie-recommendations",
       external: "https://qd4apx9xgmxk4xfw7mbn2y.streamlit.app/",
       folder: "https://ext.same-assets.com/1060946726/493340101.svg", // Updated to consistent image
@@ -68,9 +92,6 @@ export default function ProjectsPage() {
                   <div className="p-6">
                     <div className="flex flex-row items-center justify-between">
                       <div className="flex flex-row justify-between">
-                        <div className="mx-1.5">
-                          <Image src={project.folder} alt="folder" width={24} height={24} />
-                        </div>
                         {project.external && (
                           <div className="mx-1.5">
                             <a
