@@ -33,12 +33,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/EK.png" type="image/png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Providers>
-          <ClientBody>{children}</ClientBody>
-        </Providers>
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <Providers>
+            <ClientBody>{children}</ClientBody>
+          </Providers>
         <Analytics />
-      </body>
+        </body>
     </html>
   );
 }
