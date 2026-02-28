@@ -7,7 +7,7 @@ const projects = [
       "Advancing research in music models and eliminating the need for a producer by using your voice to modify songs in real time. Pushes the boundaries of AI-powered music production, allowing artists to shape their sound through natural voice commands.",
     tags: ["AI", "Music", "Voice AI", "Real-time Processing", "Machine Learning"],
     github: "https://github.com/dlegend4000/gomar33",
-    external: "https://gomar33-cc75d.web.app/",
+    external: null,
   },
   {
     title: "World's First Irish-Speaking AI",

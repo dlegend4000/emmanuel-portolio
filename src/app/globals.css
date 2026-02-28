@@ -58,6 +58,37 @@
     --footer-link-hover-fg: #292524;
   }
 
+  html.dark {
+    --background: 20 6% 10%;
+    --foreground: 36 20% 88%;
+    --card: 20 6% 10%;
+    --card-foreground: 36 20% 88%;
+    --popover: 20 6% 10%;
+    --popover-foreground: 36 20% 88%;
+    --secondary: 20 5% 18%;
+    --secondary-foreground: 36 20% 88%;
+    --muted: 20 5% 18%;
+    --muted-foreground: 30 5% 60%;
+    --accent: 20 5% 18%;
+    --accent-foreground: 36 20% 88%;
+    --border: 20 5% 20%;
+    --input: 20 5% 20%;
+
+    --warm-bg: #1c1917;
+    --gray-50: #292524;
+    --gray-100: #3c3735;
+    --gray-200: #57534e;
+    --gray-500: #a8a29e;
+    --gray-600: #d6d3d1;
+    --gray-800: #e7e5e4;
+    --gray-900: #f5f5f4;
+    --footer-bg: #141211;
+    --footer-fg: #a8a29e;
+    --footer-link-bg: rgba(168, 162, 158, 0.1);
+    --footer-link-hover-bg: rgba(168, 162, 158, 0.2);
+    --footer-link-hover-fg: #f5f5f4;
+  }
+
   * {
     @apply border-border;
   }

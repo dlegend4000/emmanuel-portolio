@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { blogPosts } from "@/content/blog-data";
 import CoverflowGallery from "@/components/CoverflowGallery";
+import ThemeToggle from "@/components/theme-toggle";
 
 
 function useCurrentTime() {
@@ -68,6 +69,7 @@ export default function Home() {
                   Founder &amp; Builder
                 </span>
               </div>
+              <ThemeToggle />
             </nav>
 
             {/* Bio Section */}

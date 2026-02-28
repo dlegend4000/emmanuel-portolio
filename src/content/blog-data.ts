@@ -9,6 +9,48 @@ export interface BlogPost {
   
   export const blogPosts: BlogPost[] = [
     {
+      title: "Tell Me The Truth",
+      date: "2026-02-28",
+      slug: "tell-me-the-truth",
+      tags: ["REFLECTION", "STARTUPS", "CLARITY"],
+      summary: "An obsession with clarity has been getting louder. Not the polished kind — the raw, no-filler, say-what-you-mean kind.",
+      content: `
+        It's another quiet evening, the kind where thoughts run deeper than usual. The kind where "me" and "myself" sit across from each other and talk about what's been happening.
+        And lately, what's been happening is this: an obsession with clarity has been getting louder.
+        Not the polished kind. Not the rehearsed kind. The raw, no-filler, say-what-you-mean kind. The kind that cuts through and gets to the point before time is wasted on either side.
+
+        ** The First Front: Understanding **
+        Building something real means learning constantly, the scope of what you need to hold in your head at any given moment is enormous.
+        And I've learned this: the moment someone explains something to me without clarity, I lose ground. I lose time. I build on a shaky foundation and eventually have to tear it back down.
+        There's a version of learning that feels productive but isn't. Where you nod along, where the explanation sounds thorough, where the words are technically accurate, but when you go to apply it, you're lost. Because it was never made clear to you, in terms that connected with what you already know.
+        So now I've stopped pretending. If I don't understand, I say it plainly. And I go looking for the explanation that doesn't just inform but lands.
+        That's become a non-negotiable.
+
+        ** The Second Front: AI Tools **
+        This one is worth saying out loud because not enough people say it.
+        Claude and tools like it are only genuinely useful when clarity is the starting point. When it's not, they don't just fail to help. They actively make things worse.
+        Vague input produces confident-sounding output that sends you in the wrong direction. You ask a fuzzy question, you get a polished answer that fits the fuzz. It sounds right. It reads well. And then you build on it. And then you realise the whole thing was built on an imprecise premise that the tool had no way of pushing back on because you never gave it enough to push back on.
+        The tool is only as honest as the clarity you bring to it.
+
+        ** The Third Front: People **
+        This one hits differently.
+        When you're building a company, you have conversations every day with people who might become customers, investors, partners. And you learn quickly to read the room, not for enthusiasm, but for honesty.
+        There's a type of conversation I've started to recognise and quietly dread. The one where someone uses a lot of words to say nothing committed. Where the feedback is warm but formless. Where every follow-up gets met with "interesting" and "let's stay in touch". Where they seem engaged but something in the pattern tells you they were never going to take you seriously from the first hello.
+        The worst part isn't the rejection, rejection is clean. The worst part is the time spent in ambiguity, wondering, re-reading messages, adjusting your approach to win over someone who had already made up their mind.
+        I'd rather someone tell me the truth.
+        Tell me it's not the right fit. Tell me you don't see the market the way I do. I can work with that. I can learn from that. I can move faster.
+        The people I've respected most in these conversations are the ones who speak plainly. Who give you a real answer even when a non-answer would be easier. Who treat your time the way they'd want theirs treated.
+
+        ** Where This All Connects **
+        Clarity isn't just a communication preference. It's a value system.
+        It's how you respect someone's intelligence. It's how you build things that actually work. It's how you make decisions without burning time on noise. It's how you know who's with you and who's just filling space.
+        The obsession makes sense to me now. When you're moving fast, building, pitching, learning, deciding. Clarity is the thing that keeps the whole operation honest. Every layer of vagueness is a tax. On your time, your focus, your momentum.
+        So ask for it. Demand it, even. From the tools you use, from the people you talk to, from yourself when you sit down to think.
+        Tell the truth. Ask for the truth. Build with the truth.
+        Everything else is just noise dressed up nicely.
+      `,
+    },
+    {
       title: "How do I Explain",
       date: "2025-12-31",
       slug: "how-do-i-explain",

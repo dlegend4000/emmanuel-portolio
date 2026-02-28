@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./theme-toggle";
 
 const navLinks = [
   { href: "/blog", label: "Blog" },
@@ -36,6 +37,7 @@ export default function Header() {
       {/* Nav */}
       <nav aria-label="Main navigation">
         <ul className="flex items-center gap-4 list-none">
+          <li><ThemeToggle /></li>
           {navLinks.map(({ href, label }) => {
             const isActive = pathname.startsWith(href);
             return (
