@@ -13,7 +13,7 @@ export interface BlogPost {
       date: "2026-02-28",
       slug: "tell-me-the-truth",
       tags: ["REFLECTION", "STARTUPS", "CLARITY"],
-      summary: "An obsession with clarity has been getting louder. Not the polished kind — the raw, no-filler, say-what-you-mean kind.",
+      summary: "An obsession with clarity has been getting louder. Not the polished kind. The raw, no-filler, say-what-you-mean kind.",
       content: `
         It's another quiet evening, the kind where thoughts run deeper than usual. The kind where "me" and "myself" sit across from each other and talk about what's been happening.
         And lately, what's been happening is this: an obsession with clarity has been getting louder.
