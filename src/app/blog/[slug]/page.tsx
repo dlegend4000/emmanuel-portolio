@@ -9,8 +9,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find((post) => post.slug === params.slug);
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -18,90 +19,110 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <Layout>
-      <article>
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <nav>
-            <ul className="flex flex-wrap text-sm">
-              <li className="mr-2">
-                <Link href="/" className="text-primary hover:text-gray-600 dark:hover:text-gray-300">
-                  Home
-                </Link>
-              </li>
-              <li className="mr-2">
-                <span className="text-gray-500 dark:text-gray-400">/</span>
-              </li>
-              <li className="mr-2">
-                <Link href="/blog" className="text-primary hover:text-gray-600 dark:hover:text-gray-300">
-                  Blog
-                </Link>
-              </li>
-              <li className="mr-2">
-                <span className="text-gray-500 dark:text-gray-400">/</span>
-              </li>
-              <li>
-                <span className="text-gray-500 dark:text-gray-400">{post.title}</span>
-              </li>
-            </ul>
-          </nav>
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+      <article className="pt-6 pb-16">
+        {/* Breadcrumb */}
+        <nav className="mb-8">
+          <ol className="flex items-center gap-1.5 text-sm flex-wrap">
+            <li>
+              <Link
+                href="/"
+                style={{ color: "var(--gray-500)", textDecoration: "none" }}
+              >
+                Home
+              </Link>
+            </li>
+            <li style={{ color: "var(--gray-400)" }}>/</li>
+            <li>
+              <Link
+                href="/blog"
+                style={{ color: "var(--gray-500)", textDecoration: "none" }}
+              >
+                Writing
+              </Link>
+            </li>
+            <li style={{ color: "var(--gray-400)" }}>/</li>
+            <li
+              className="truncate max-w-[200px]"
+              style={{ color: "var(--gray-700)" }}
+            >
+              {post.title}
+            </li>
+          </ol>
+        </nav>
+
+        {/* Header */}
+        <div className="pb-8" style={{ borderBottom: "1px solid var(--gray-100)" }}>
+          <h1
+            className="text-3xl font-semibold leading-snug font-sentient"
+            style={{ color: "var(--gray-900)" }}
+          >
             {post.title}
           </h1>
-          <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
-            <div className="flex items-center">
-              <time
-                dateTime={post.date}
-                className="text-gray-500 dark:text-gray-400"
-              >
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </time>
+
+          <div className="mt-3 flex items-center gap-4 flex-wrap">
+            <time
+              dateTime={post.date}
+              className="text-sm"
+              style={{ color: "var(--gray-500)" }}
+            >
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+
+            <div className="flex flex-wrap gap-1.5">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs px-2 py-0.5 rounded-sm uppercase tracking-wide"
+                  style={{
+                    background: "var(--gray-50)",
+                    color: "var(--gray-600)",
+                    border: "1px solid var(--gray-200)",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="divide-y divide-gray-200 dark:divide-gray-700">
-          <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3">
-            <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">
-              {/* Tags */}
-              <div className="flex flex-wrap">
-                {post.tags.map((tag) => (
-                  <span key={tag} className="blog-tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+        {/* Content */}
+        <div className="mt-8 text-sm leading-7" style={{ color: "var(--gray-600)" }}>
+          {post.content?.split("\n").map((paragraph, index) => {
+            const trimmed = paragraph.trim();
+            if (!trimmed) return null;
 
-              {/* Content */}
-              <div className="mt-8 text-gray-500 dark:text-gray-400">
-                {post.content?.split("\n").map((paragraph, index) => {
-                  // Skip empty paragraphs from the content template literals
-                  const trimmed = paragraph.trim();
-                  if (!trimmed) return null;
+            const key = `${post.slug}-${index}`;
 
-                  // Generate a more unique key than just the index
-                  const contentKey = `${post.slug}-p-${index}-${trimmed.substring(0, 10).replace(/\s+/g, '-')}`;
+            if (trimmed.startsWith("-")) {
+              return (
+                <li key={key} className="ml-4 mt-2 list-disc">
+                  {trimmed.substring(1).trim()}
+                </li>
+              );
+            }
 
-                  // Handle bullet points
-                  if (trimmed.startsWith("-")) {
-                    return (
-                      <li key={contentKey} className="mt-2">
-                        {trimmed.substring(1).trim()}
-                      </li>
-                    );
-                  }
+            return (
+              <p key={key} className="mt-5">
+                {trimmed}
+              </p>
+            );
+          })}
+        </div>
 
-                  return (
-                    <p key={contentKey} className="mt-4">
-                      {trimmed}
-                    </p>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+        {/* Back link */}
+        <div className="mt-16 pt-6" style={{ borderTop: "1px solid var(--gray-100)" }}>
+          <Link
+            href="/blog"
+            className="text-sm italic font-sentient"
+            style={{ color: "var(--gray-500)", textDecoration: "none" }}
+          >
+            ← All writing
+          </Link>
         </div>
       </article>
     </Layout>

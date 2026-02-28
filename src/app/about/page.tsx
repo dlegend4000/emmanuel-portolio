@@ -2,332 +2,192 @@ import Layout from "@/components/layout";
 import Image from "next/image";
 import Link from "next/link";
 
+const experience = [
+  {
+    role: "Co-founder & CTO",
+    company: "CallCrewAI",
+    url: "https://www.callcrew-ai.com/",
+    period: "August 2025 — Present",
+    bullets: [
+      "Architecting and executing technical strategy for an AI-powered platform serving trades, facilities, and field-service businesses.",
+      "Leading full-stack development, infrastructure scaling, and AI/ML integration to deliver 24/7 automated solutions.",
+      "Driving product roadmap and technical decisions to scale from MVP to production with active paying customers.",
+    ],
+  },
+  {
+    role: "Production Engineer Fellow",
+    company: "Meta × MLH",
+    url: "https://fellowship.mlh.io/",
+    period: "June 2025 — Present",
+    bullets: [
+      "Production engineering projects under the guidance of Meta engineers and mentors.",
+      "Less than 2.5% acceptance rate.",
+    ],
+  },
+  {
+    role: "Software Engineering Intern — Data Integrity",
+    company: "JP Morgan Chase & Co.",
+    url: "https://www.jpmorganchase.com",
+    period: "June 2024 — August 2024",
+    bullets: [
+      "Built a back-end application using Java Spring Boot, Terraform, Docker, and AWS to perform data validation and quality checks.",
+      "Developed a REST API using Spring Boot and MySQL to store validation data.",
+      "Resolved complex data quality bugs affecting 80M+ clients worldwide.",
+    ],
+  },
+  {
+    role: "Data Analyst Intern — Applications",
+    company: "Wuxi Biologics",
+    url: "https://wuxibiologics.com",
+    period: "January 2023 — September 2023",
+    bullets: [
+      "Performed data analytics and visualisations on large datasets.",
+      "Automated dashboard creation using R, Python, SQL, and Tableau to improve team efficiency.",
+      "Resolved database issues on Microsoft SQL involving 50k+ rows.",
+    ],
+  },
+  {
+    role: "Mechanical Engineering Intern — Design",
+    company: "Silent Aire",
+    url: "https://www.silent-aire.com",
+    period: "July 2022 — September 2022",
+    bullets: [
+      "Carried out pressure and leak analysis on doors and designed solutions to boost efficiency.",
+      "Designed plans and dimensions for HVAC systems in data centres.",
+      "Documented standard operating procedures for hyperscale ventilation systems.",
+    ],
+  },
+];
+
 export default function AboutPage() {
   return (
     <Layout>
-      <div className="">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5 md:pl-16">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div className="pt-6 pb-16">
+        {/* Page heading */}
+        <div className="pb-8">
+          <h1
+            className="text-2xl font-semibold font-sentient italic"
+            style={{ color: "var(--gray-900)" }}
+          >
             About
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center space-x-2 pt-8 xl:sticky xl:top-0">
+
+        {/* Bio section */}
+        <div className="flex flex-col sm:flex-row gap-8 pb-10" style={{ borderBottom: "1px solid var(--gray-100)" }}>
+          {/* Avatar */}
+          <div className="shrink-0 flex flex-col items-center sm:items-start gap-3">
             <Image
-              alt="avatar"
+              alt="Emmanuel Karibiye"
               src="/me.jpg"
-              width={192}
-              height={192}
-              className="h-48 w-48 rounded-full xl:rounded-full"
+              width={120}
+              height={120}
+              className="rounded-full object-cover"
+              style={{ width: 120, height: 120 }}
             />
-            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">Emmanuel Karibiye</h3>
-            <div className="text-gray-500 dark:text-gray-400">Co-founder & CTO</div>
-            <div className="text-gray-500 dark:text-gray-400">CallCrewAI</div>
-            <div className="flex flex-col pt-3">
-              <a
-                className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                href="https://www.linkedin.com/in/emmanuel-karibiye-509b9a1b3/"
-                data-screen-name="@yellowdragoon1"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Say Hi!
-              </a>
+            <div>
+              <p className="text-sm font-medium" style={{ color: "var(--gray-900)" }}>
+                Emmanuel Karibiye
+              </p>
+              <p className="text-xs" style={{ color: "var(--gray-500)" }}>
+                Co-founder &amp; CTO, CallCrewAI
+              </p>
+              <p className="text-xs" style={{ color: "var(--gray-500)" }}>
+                Dublin, Ireland
+              </p>
             </div>
+            <a
+              href="https://www.linkedin.com/in/emmanuel-karibiye-509b9a1b3/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pill-link text-xs"
+            >
+              Say hi →
+            </a>
           </div>
 
-          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+          {/* Bio text */}
+          <div className="flex flex-col gap-4 text-sm leading-relaxed" style={{ color: "var(--gray-600)" }}>
             <p>
-              <span>
-                Hi, I'm Emmanuel Karibiye, a Software Engineer based in Dublin, Ireland. I'm currently the Co-founder and CTO of{" "}
-                <a
-                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.callcrew-ai.com/"
-                >
-                  CallCrewAI
-                </a>
-                , where we're building AI solutions to transform how trades, facilities, and field-service firms operate. I'm passionate about many areas of Computer Science, especially Artificial Intelligence, LLMS, Fullstack Development, Reinforcement Learning, UI/UX Design. I enjoy exploring how tech intersects with creativity and real world problems.
-
-              </span>
-            </p>
-
-            <hr className="my-6 border-t border-gray-300 dark:border-gray-700" />
-
-            <p className="sm:block md:block lg:block">
-            Outside of work, I'm really into fashion, music, and sports. I play both piano and guitar, and I never miss a chance to get out on the football pitch. These interests keep me balanced and constantly inspired in different ways.
-
-           
-            </p>
-
-            <hr className="my-6 border-t border-gray-300 dark:border-gray-700" />
-
-            <p>
-              If you'd like to work with me, feel free to reach out via any of my{" "}
+              I'm a Software Engineer based in Dublin, Ireland. Currently co-founding{" "}
               <a
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-                href="/contact"
-              >
-                contacts.
-              </a>
-            </p>
-
-            <hr className="my-6 border-t border-gray-300 dark:border-gray-700" />
-
-            <p>
-              This site is inspired by the following{" "}
-              <a
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                href="https://www.callcrew-ai.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/pycoder2000/blog"
+                className="pill-link"
               >
-                template
-                <Image
-                  src="https://ext.same-assets.com/3188895193/3611773576.svg"
-                  alt="external link"
-                  width={16}
-                  height={16}
-                  className="inline-block ml-1"
-                />
-              </a>{" "}
-              by Parth Desai.
+                CallCrewAI
+              </a>
+              , where we're building AI solutions to transform how trades, facilities, and field-service firms operate.
+            </p>
+            <p>
+              I'm passionate about artificial intelligence, LLMs, full-stack development, reinforcement learning, and UI/UX design. I enjoy exploring how technology intersects with creativity and real-world problems.
+            </p>
+            <p>
+              Outside of work I'm into fashion, music, and sports. I play piano and guitar, and I never miss a chance to get out on the football pitch.
+            </p>
+            <p>
+              If you'd like to work together, reach me through my{" "}
+              <Link href="/contact" className="pill-link">
+                contacts
+              </Link>
+              .
             </p>
           </div>
         </div>
 
-        <div className="mt-10 md:pl-16">
-          <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Experience
-            </h1>
-          </div>
-          <div className="max-w-none pt-8 pb-8 xl:col-span-2">
-            <div className="my-3">
-              <div className="flex flex-row text-xl">
-                <span className="text-gray-500 dark:text-gray-400">Co-founder & CTO</span>{" "}
-                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
-                <span className="text-primary">
-                  <a
-                    className="company"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.callcrew-ai.com/"
-                  >
-                    CallCrewAI
-                  </a>
-                </span>
-              </div>
-              <div>
-                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
-                  August 2025 - Present
-                </div>
-                <div className="p-2">
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                      Architecting and executing technical strategy for an AI-powered platform serving trades, facilities, and field-service businesses
-                    </div>
-                  </div>
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                      Leading full-stack development, infrastructure scaling, and AI/ML integration to deliver 24/7 automated solutions
-                    </div>
-                  </div>
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                      Driving product roadmap and technical decisions to scale from MVP to production platform with active paying customers
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
-                ~~~
-              </div>
-            </div>
+        {/* Experience section */}
+        <div className="pt-10">
+          <p
+            className="text-sm italic font-sentient pb-6"
+            style={{ color: "var(--gray-600)" }}
+          >
+            Experience
+          </p>
 
-            <div className="my-3">
-              <div className="flex flex-row text-xl">
-                <span className="text-gray-500 dark:text-gray-400">Production Engineer Fellow</span>{" "}
-                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
-                <span className="text-primary">
-                  <a
-                    className="company"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://fellowship.mlh.io/"
+          <ul>
+            {experience.map((job, i) => (
+              <li
+                key={i}
+                className="py-7"
+                style={{ borderBottom: "1px solid var(--gray-100)" }}
+              >
+                {/* Role + company */}
+                <div className="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <p className="text-sm font-medium" style={{ color: "var(--gray-900)" }}>
+                      {job.role}
+                    </p>
+                    <a
+                      href={job.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm"
+                      style={{ color: "hsl(var(--primary))", textDecoration: "none" }}
+                    >
+                      {job.company}
+                    </a>
+                  </div>
+                  <span
+                    className="text-xs tabular-nums shrink-0 pt-0.5"
+                    style={{ color: "var(--gray-500)" }}
                   >
-                    Meta X MLH
-                  </a>
-                </span>
-              </div>
-              <div>
-                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
-                  June 2025 - Present
+                    {job.period}
+                  </span>
                 </div>
-                <div className="p-2">
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                      I did production engineer projects under the guidance of mentors and Meta engineers.
-                    </div>
-                  </div>
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                      Less than a 2.5% acceptance rate.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
-                ~~~
-              </div>
-            </div>
 
-            <div className="my-3">
-              <div className="flex flex-row text-xl">
-                <span className="text-gray-500 dark:text-gray-400">Software Engineering Intern | Data Integrity</span>{" "}
-                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
-                <span className="text-primary">
-                  <a
-                    className="company"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.jpmorganchase.com"
-                  >
-                    JP Morgan Chase & Co.
-                  </a>
-                </span>
-              </div>
-              <div>
-                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
-                  June 2024 - August 2024
-                </div>
-                <div className="p-2">
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Developed a back-end application using Java Springboot, Terraform, Docker and AWS to perform data validation
-                    and quality checks
-                    </div>
-                  </div>
-                  <div className="flex flex-row">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Developed a REST API using Springboot and MySQL to store the data
-                    </div>
-                  </div>
-                  <div className="items-top flex flex-row">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Resolved complex bug issues regarding data quality and hence helped in maintaining the data security of 80
-                    million+ clients worldwide
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
-                ~~~
-              </div>
-            </div>
-
-            <div className="my-3">
-              <div className="flex flex-row text-xl">
-                <span className="text-gray-500 dark:text-gray-400">Data Analyst Intern | Applications</span>{" "}
-                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
-                <span className="text-primary">
-                  <a
-                    className="company"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://wuxibiologics.com"
-                  >
-                    Wuxi Biologics
-                  </a>
-                </span>
-              </div>
-              <div>
-                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
-                  Jan 2023 - September 2023
-                </div>
-                <div className="p-2">
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Performing data analytics and visualizations involving large amounts of data
-                    </div>
-                  </div>
-                  <div className="flex flex-row">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Automated the creation of several dashboards to save time and improve efficiency in the team using R, python,
-                    SQL, and Tableau
-                    </div>
-                  </div>
-                  <div className="items-top flex flex-row">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Resolved database issues on Microsoft SQL involving 50k+ rows.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
-                ~~~
-              </div>
-            </div>
-            
-            <div className="my-3">
-              <div className="flex flex-row text-xl">
-                <span className="text-gray-500 dark:text-gray-400">Mechanical Engineering Intern | Design</span>{" "}
-                <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{" "}
-                <span className="text-primary">
-                  <a
-                    className="company"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.silent-aire.com"
-                  >
-                    Silent Aire
-                  </a>
-                </span>
-              </div>
-              <div>
-                <div className="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
-                  July 2022 - September 2022
-                </div>
-                <div className="p-2">
-                  <div className="flex flex-row ">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Carrying out pressure/Leak analysis on the doors and coming up with a design solution hence boosting its
-efficiency
-                    </div>
-                  </div>
-                  <div className="flex flex-row">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Designing plans and specifying dimensions to be followed in building HVAC systems for data centers.
-                    </div>
-                  </div>
-                  <div className="items-top flex flex-row">
-                    <div className="mr-2 text-lg text-primary"> ‣</div>
-                    <div className="text-gray-500 dark:text-gray-400">
-                    Observing and documenting the Standard operating procedures for each role involved in building our hyperscale
-ventilation systems which may vary depending on the specifications of the customer
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
-                ~~~
-              </div>
-            </div>
-          </div>
+                {/* Bullets */}
+                <ul className="mt-3 flex flex-col gap-1.5">
+                  {job.bullets.map((bullet, j) => (
+                    <li key={j} className="flex gap-2 text-sm" style={{ color: "var(--gray-600)" }}>
+                      <span className="mt-0.5 shrink-0" style={{ color: "var(--gray-400)" }}>‣</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </Layout>

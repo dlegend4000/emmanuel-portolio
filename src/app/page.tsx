@@ -1,171 +1,249 @@
 "use client";
-import Layout from "@/components/layout";
+
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { blogPosts } from "@/content/blog-data";
-import AchievementsGrid from "@/components/AchievementsGrid";
-import Highlights from "@/components/Highlights";
-import ImageCarousel from "@/components/ImageCarousel";
-import React, { useEffect, useState } from "react";
+import CoverflowGallery from "@/components/CoverflowGallery";
+
+
+function useCurrentTime() {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: "Europe/Dublin",
+      };
+      setTime(
+        now.toLocaleTimeString("en-US", options).toLowerCase().replace(" ", "\u00a0")
+      );
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return time;
+}
 
 export default function Home() {
-    // Get the latest 3 blog posts
-    const latestPosts = blogPosts.slice(0, 3);
+  const [expanded, setExpanded] = useState(false);
+  const currentTime = useCurrentTime();
+  const latestPosts = blogPosts.slice(0, 3);
 
-    // Typewriter animation for multiple phrases
-    const phrases = [
-        "Emmanuel",
-        "Founder & Builder",
-        "Software Engineer"
-    ];
-    const [typed, setTyped] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [phraseIndex, setPhraseIndex] = useState(0);
-    const [typingSpeed, setTypingSpeed] = useState(120);
+  const formatPostDate = (dateStr: string) => {
+    const d = new Date(dateStr);
+    return {
+      year: String(d.getFullYear()),
+      short: `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`,
+    };
+  };
 
-    useEffect(() => {
-        let typingTimeout: NodeJS.Timeout;
-        const currentPhrase = phrases[phraseIndex];
+  return (
+    <>
+      <main className="site-surface">
+        <div className="flex flex-col items-center min-h-screen">
+          <div className="pt-12 sm:pt-24 pb-24 sm:pb-32 max-w-2xl px-8 w-full">
 
-        if (!isDeleting && typed.length < currentPhrase.length) {
-            typingTimeout = setTimeout(() => {
-                setTyped(currentPhrase.substring(0, typed.length + 1));
-                setTypingSpeed(120);
-            }, typingSpeed);
-        } else if (!isDeleting && typed.length === currentPhrase.length) {
-            typingTimeout = setTimeout(() => setIsDeleting(true), 1200);
-        } else if (isDeleting && typed.length > 0) {
-            typingTimeout = setTimeout(() => {
-                setTyped(currentPhrase.substring(0, typed.length - 1));
-                setTypingSpeed(60);
-            }, typingSpeed);
-        } else if (isDeleting && typed.length === 0) {
-            setIsDeleting(false);
-            setPhraseIndex((phraseIndex + 1) % phrases.length);
-        }
-        return () => clearTimeout(typingTimeout);
-    }, [typed, isDeleting, phraseIndex, phrases]);
+            {/* Header / Breadcrumb + Nav */}
+            <nav aria-label="Navigation" className="flex items-center justify-between flex-wrap gap-y-2">
+              <div className="flex flex-row items-center gap-1.5 whitespace-nowrap">
+                <Link
+                  href="/"
+                  className="font-sentient italic text-sm font-medium text-gray-900 shrink-0 no-underline"
+                  style={{ color: "var(--gray-900)" }}
+                >
+                  Emmanuel Karibiye
+                </Link>
+                <span className="text-sm shrink-0" style={{ color: "var(--gray-500)" }}>—</span>
+                <span
+                  className="text-sm italic font-sentient"
+                  style={{ color: "var(--gray-600)" }}
+                >
+                  Founder &amp; Builder
+                </span>
+              </div>
+            </nav>
 
-    return (
-        <Layout>
-            <div>
-                <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
-                    <div className="pt-6">
-                        {/* Dummy element to ensure Tailwind includes these classes: opacity-100 opacity-0 translate-y-0 translate-y-4 */}
-                        <div className="hidden opacity-100 opacity-0 translate-y-0 translate-y-4"></div>
-                        <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-                            {phraseIndex === 0 ? (
-                                <>
-                                    Hi, I am{' '}
-                                    <span className="text-primary border-r-2 border-primary">{typed}</span>
-                                </>
-                            ) : (
-                                <span className="text-primary border-r-2 border-primary">{typed}</span>
-                            )}
-                        </h1>
-                        <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-                            Co-founder of CallCrewAI.
-                            <div className="mt-4 flex gap-4">
-                                <a
-                                    href="https://www.callcrew-ai.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block rounded bg-background border border-primary px-6 py-2 text-primary font-semibold shadow transition hover:bg-primary hover:border-primary hover:text-white"
-                                >
-                                    Visit CallCrewAI
-                                </a>
-                            </div>
-                        </h2>
-                        <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-                            You might just find something worthwhile.
-                            <span> Thank you for visiting!</span>
-                        </p>
-                        <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-                            You might just find something worthwhile.
-                            <span> Thank you for visiting!</span>
-                        </p>
-                    </div>
+            {/* Bio Section */}
+            <div className="max-w-xl mx-auto pt-10">
+              <p
+                className="text-sm leading-relaxed pt-2"
+                style={{ color: "var(--gray-600)" }}
+              >
+                I'm interested in art, software, and what's possible at the edge of technology and human experience.
+              </p>
+              <p
+                className="text-sm leading-relaxed pt-2"
+                style={{ color: "var(--gray-600)" }}
+              >
+                Currently co-founding{" "}
+                <a
+                  href="https://www.callcrew-ai.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pill-link"
+                >
+                  CallCrewAI
+                </a>
+                , the autopilot for trades and field service teams. I care about clarity, real use, and building things that hold up.
+              </p>
+              <p
+                className="text-sm leading-relaxed pt-2"
+                style={{ color: "var(--gray-600)" }}
+              >
+                See my{" "}
+                <Link href="/projects" className="pill-link">
+                  projects
+                </Link>
+                . Read the{" "}
+                <Link href="/blog" className="pill-link">
+                  blog
+                </Link>
+                . Or reach me through{" "}
+                <Link href="/contact" className="pill-link">
+                  email
+                </Link>
+                .
+              </p>
 
-                    {/* Replacing button grid with profile picture */}
-                    <div className="flex items-center justify-center py-12 xl:ml-auto">
-                        <div className="overflow-hidden shadow-lg rounded-full w-[300px] h-[300px]">
-                            <Image
-                                src="/me.jpg" // <- Update this path to your profile image
-                                alt="Profile picture of Emmanuel"
-                                width={300}
-                                height={300}
-                                className="object-cover w-[300px] h-[300px] rounded-full"
-                            />
-                        </div>
-                    </div>
-                </div>
+              {/* Expandable content */}
+              <div className="pt-5">
+                <button
+                  type="button"
+                  onClick={() => setExpanded(!expanded)}
+                  className="expand-btn"
+                  aria-expanded={expanded}
+                >
+                  •••
+                </button>
+                {expanded && (
+                  <p
+                    className="mt-3 text-sm leading-relaxed rounded-xl animate-in fade-in slide-in-from-top-2 duration-300"
+                    style={{
+                      color: "var(--gray-600)",
+                      background: "var(--gray-100)",
+                      padding: "0.75rem 1rem",
+                    }}
+                  >
+                    Hackeurope Grand Winner, more wins include (ElevenLabs, JP Morgan, NDRC etc.), Meta Fellow, Web Summit Scholar. See the full{" "}
+                    <Link href="/about" className="pill-link">about</Link>
+                    , my{" "}
+                    <Link href="/projects" className="pill-link">projects</Link>
+                    , the{" "}
+                    <Link href="/blog" className="pill-link">blog</Link>
+                    , or{" "}
+                    <Link href="/press" className="pill-link">press</Link>
+                    .
+                  </p>
+                )}
+              </div>
 
-                {/* Achievements Section */}
-                <AchievementsGrid />
+              {/* Coverflow Gallery — Moments */}
+              <CoverflowGallery />
 
-                {/* Highlights Section */}
-                <Highlights />
-
-                {/* Image Carousel Section */}
-                <ImageCarousel />
-
-                {/* Latest Posts Section */}
-                <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
-                    Latest
-                </h2>
-
+              {/* Writing / Archive */}
+              <p
+                className="text-sm leading-relaxed pt-10 italic font-sentient"
+                style={{ color: "var(--gray-600)" }}
+              >
+                Writing
+              </p>
+              <section className="pt-4">
                 <ul>
-                    {latestPosts.map((post) => (
-                        <li key={post.slug} className="py-6">
-                            <Link href={`/blog/${post.slug}`}>
-                                <article>
-                                    <div className="blog-post-card xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                                        <dl>
-                                            <dt className="sr-only">Published on</dt>
-                                            <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                                                <time dateTime={post.date}>
-                                                    {new Date(post.date).toLocaleDateString("en-US", {
-                                                        year: "numeric",
-                                                        month: "long",
-                                                        day: "numeric",
-                                                    })}
-                                                </time>
-                                            </dd>
-                                        </dl>
-                                        <div className="space-y-5 xl:col-span-4">
-                                            <div className="space-y-1">
-                                                <div>
-                                                    <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                                                        <span className="text-gray-900 transition duration-500 ease-in-out hover:text-primary dark:text-gray-100 dark:hover:text-primary">
-                                                            {post.title}
-                                                        </span>
-                                                    </h2>
-                                                </div>
-                                                <div className="flex flex-wrap">
-                                                    {post.tags.map((tag) => (
-                                                        <span
-                                                            key={tag}
-                                                            className="blog-tag"
-                                                        >
-                                                            {tag}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                                <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                                                    {post.summary}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </Link>
-                        </li>
-                    ))}
+                  {latestPosts.map((post) => {
+                    const { year, short } = formatPostDate(post.date);
+                    return (
+                      <li key={post.slug}>
+                        <Link href={`/blog/${post.slug}`} className="archive-item group">
+                          <span
+                            className="tabular-nums"
+                            style={{ color: "var(--gray-500)", fontVariantNumeric: "tabular-nums" }}
+                          >
+                            {year}
+                          </span>
+                          <span className="archive-title min-w-0">{post.title}</span>
+                          <span
+                            className="text-sm tabular-nums text-right"
+                            style={{ color: "var(--gray-500)", fontVariantNumeric: "tabular-nums" }}
+                          >
+                            {short}
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
-                <div className="flex justify-end pt-5 text-lg font-normal leading-6">
-                    <a className="special-underline text-primary hover:text-gray-100 hover:no-underline dark:text-primary hover:dark:text-gray-100" aria-label="all posts" href="/blog">All Posts →</a>
-                </div>
+              </section>
+
+              <div className="pt-4 flex justify-end">
+                <Link
+                  href="/blog"
+                  className="text-sm italic font-sentient transition-colors"
+                  style={{ color: "var(--gray-500)" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "var(--gray-900)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = "var(--gray-500)")
+                  }
+                >
+                  All writing →
+                </Link>
+              </div>
             </div>
-        </Layout>
-    );
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="footer-section w-full pb-16 pt-4 sm:pt-24 sm:pb-32">
+        <div className="mx-auto w-full max-w-2xl px-8">
+          <div className="text-center flex flex-col gap-1">
+            <p className="text-sm leading-relaxed pt-2" style={{ color: "var(--gray-500)" }}>
+              Right now I'm in Dublin, Ireland, where it's{" "}
+              <time className="font-sentient italic">
+                {currentTime || "12:00\u00a0p.m."}
+              </time>
+            </p>
+            <p className="text-sm" style={{ color: "var(--gray-500)" }}>
+              You can also find me on
+              <a
+                href="https://github.com/dlegend4000"
+                className="footer-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/emmanuelkaribiye/"
+                className="footer-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              or
+              <Link href="/contact" className="footer-link">
+                Email
+              </Link>
+              me directly.
+            </p>
+            <p
+              className="text-sm italic font-sentient pt-12"
+              style={{ color: "var(--gray-500)" }}
+            >
+              © 2026, Emmanuel Karibiye
+            </p>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 }

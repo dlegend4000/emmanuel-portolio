@@ -2,111 +2,240 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 142 71% 45%; /* green color - #b75186 converted to HSL */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 142 71% 45%; /* Same as primary */
-    --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --background-color: 0 0% 98%; /* Light mode background color */
-  }
+@font-face {
+  font-family: 'Sentient';
+  src: url('https://ext.same-assets.com/3875557713/4182361983.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  html.dark {
-    --background: 0 0% 12%; /* Dark background - close to #1e1e1e */
-    --foreground: 0 0% 98%;
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142 71% 45%; /* Keep the same primary color */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142 71% 45%; /* Same as primary */
-    --background-color: 0 0% 12%; /* Dark mode background color */
-  }
+@font-face {
+  font-family: 'Sentient';
+  src: url('https://ext.same-assets.com/3875557713/473723056.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
 @layer base {
+  :root {
+    /* Vlad's warm palette mapped to HSL for Tailwind */
+    --background: 36 55% 96%;       /* #fbf7f1 */
+    --foreground: 0 3% 17%;         /* #2c2a2a */
+    --card: 36 55% 96%;
+    --card-foreground: 0 3% 17%;
+    --popover: 36 55% 96%;
+    --popover-foreground: 0 3% 17%;
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 12% 90%;
+    --secondary-foreground: 0 3% 17%;
+    --muted: 30 12% 90%;
+    --muted-foreground: 25 5% 44%;
+    --accent: 30 12% 90%;
+    --accent-foreground: 0 3% 17%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
+    --ring: 142 71% 45%;
+    --radius: 0.5rem;
+
+    /* Vlad's raw warm colors */
+    --warm-bg: #fbf7f1;
+    --gray-50: #f5f5f4;
+    --gray-100: #e7e5e4;
+    --gray-200: #d6d3d1;
+    --gray-500: #78716c;
+    --gray-600: #57534e;
+    --gray-800: #292524;
+    --gray-900: #1c1917;
+    --footer-bg: #f0ebe3;
+    --footer-fg: #78716c;
+    --footer-link-bg: rgba(120, 113, 108, 0.1);
+    --footer-link-hover-bg: rgba(120, 113, 108, 0.2);
+    --footer-link-hover-fg: #292524;
+  }
+
   * {
     @apply border-border;
   }
+
+  html,
   body {
-    @apply bg-background text-foreground antialiased;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--warm-bg);
+    color: var(--gray-900);
+    font-family: var(--font-geist-sans), 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
+
+/* ── Typography ─────────────────────────────────────────────── */
+
+.font-sentient {
+  font-family: 'Sentient', Georgia, serif;
+}
+
+/* ── Page surface ────────────────────────────────────────────── */
+
+.site-surface {
+  background: var(--warm-bg);
+  min-height: 100vh;
+}
+
+/* ── Coverflow Gallery ───────────────────────────────────────── */
+
+.coverflow-container {
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverflow-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.coverflow-item {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Pill links ──────────────────────────────────────────────── */
+
+.pill-link {
+  display: inline-block;
+  cursor: pointer;
+  background: var(--gray-50);
+  padding: 0 0.25rem;
+  margin: 0.125rem 0;
+  border-radius: 0.125rem;
+  color: var(--gray-800);
+  font-weight: 500;
+  font-style: italic;
+  white-space: nowrap;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.pill-link:hover {
+  background: var(--gray-100);
+  color: var(--gray-900);
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+
+.footer-section {
+  background: var(--footer-bg);
+}
+
+.footer-link {
+  cursor: pointer;
+  padding: 0 0.25rem;
+  margin: 0 0.25rem;
+  border-radius: 0.125rem;
+  font-style: italic;
+  background: var(--footer-link-bg);
+  color: var(--footer-fg);
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  background: var(--footer-link-hover-bg);
+  color: var(--footer-link-hover-fg);
+}
+
+/* ── Archive list ────────────────────────────────────────────── */
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 72px 1fr 64px;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  align-items: baseline;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gray-50);
+  color: inherit;
+}
+
+.archive-item:first-child {
+  border-top: 1px solid var(--gray-50);
+}
+
+.archive-item:hover .archive-title {
+  text-decoration-color: var(--gray-200);
+}
+
+.archive-title {
+  color: var(--gray-900);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+/* ── Expand button ───────────────────────────────────────────── */
+
+.expand-btn {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border-radius: 0.375rem;
+  background: var(--gray-50);
+  color: var(--gray-500);
+  font-style: italic;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.875rem;
+}
+
+.expand-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-800);
+}
+
+/* ── Inner-page components (blog, projects …) ────────────────── */
 
 @layer components {
-  /* special underlines for links */
   .link-underline {
-    @apply hover:text-primary transition-colors duration-200;
+    @apply text-primary transition-colors duration-200 hover:opacity-75;
   }
 
-  /* Tag styling for blog posts */
   .blog-tag {
-    @apply mt-2 mr-3 rounded-lg border border-primary py-1 px-3 text-sm font-medium uppercase text-primary
-    transition duration-500 ease-in-out hover:bg-primary hover:text-white;
+    @apply mt-2 mr-3 rounded-lg border border-primary py-1 px-3 text-sm font-medium
+           uppercase text-primary transition duration-500 ease-in-out
+           hover:bg-primary hover:text-white;
   }
 
-  /* Blog post hover effect */
   .blog-post-card {
-    @apply bg-transparent bg-opacity-20 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 p-2;
+    @apply bg-transparent transition duration-200 p-2
+           hover:rounded-xl;
+    &:hover { background-color: var(--gray-50); }
   }
 }
 
-/* group hover scale effect - using direct class instead of @apply */
-.post-container {
-  display: flex;
-  background-color: transparent;
-  background-opacity: 0.2;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  transition-duration: 100ms;
-}
+/* ── Utilities ───────────────────────────────────────────────── */
 
-/* Removed @apply group here */
-.post-container:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-radius: 0.75rem; /* rounded-xl */
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity)); /* bg-gray-100 */
-}
-
-.dark .post-container:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity)); /* dark:bg-gray-800 */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

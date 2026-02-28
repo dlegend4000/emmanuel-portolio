@@ -2,89 +2,60 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import MobileMenu from "./mobile-menu";
+
+const navLinks = [
+  { href: "/blog", label: "Blog" },
+  { href: "/projects", label: "Projects" },
+  { href: "/about", label: "About" },
+  { href: "/press", label: "Press" },
+];
 
 export default function Header() {
   const pathname = usePathname();
-  const [path, setPath] = useState<string>("");
-  const [cursorVisible, setCursorVisible] = useState<boolean>(true);
-
-  useEffect(() => {
-    // Get the path without leading slash for display
-    const pathWithoutSlash = pathname === "/" ? "" : pathname.slice(1);
-    setPath(pathWithoutSlash);
-
-    // Create cursor blinking effect
-    const interval = setInterval(() => {
-      setCursorVisible((prev) => !prev);
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, [pathname]);
 
   return (
-    <header className="flex items-center justify-between py-10">
-      <div>
-        <Link href="/" aria-label="Emmanuel's Blog">
-          <div className="text-primary flex items-center justify-between text-xl font-semibold dark:text-primary">
-            ~/
-            {path}
-            <span className={`ml-1 ${cursorVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-100`}>
-              |
-            </span>
-          </div>
+    <header className="flex items-center justify-between py-8 flex-wrap gap-y-2">
+      {/* Breadcrumb */}
+      <div className="flex flex-row items-center gap-1.5 whitespace-nowrap">
+        <Link
+          href="/"
+          className="font-sentient italic text-sm font-medium no-underline"
+          style={{ color: "var(--gray-900)", textDecoration: "none" }}
+        >
+          Emmanuel Karibiye
         </Link>
+        <span className="text-sm" style={{ color: "var(--gray-500)" }}>—</span>
+        <span
+          className="text-sm italic font-sentient"
+          style={{ color: "var(--gray-600)" }}
+        >
+          Founder &amp; Builder
+        </span>
       </div>
-      <div className="flex items-center text-base leading-5">
-        <nav className="hidden sm:block">
-          <ul className="flex items-center">
-            <li className="mr-2">
-              <Link
-                href="/"
-                className={`link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3`}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link
-                href="/blog"
-                className={`link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3`}
-              >
-                Blog
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link
-                href="/projects"
-                className={`link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3`}
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link
-                href="/about"
-                className={`link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/press"
-                className={`link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3`}
-              >
-                Press
-              </Link>
-            </li>
-          </ul>
-        </nav>
 
-        <MobileMenu />
-
-      </div>
+      {/* Nav */}
+      <nav aria-label="Main navigation">
+        <ul className="flex items-center gap-4 list-none">
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname.startsWith(href);
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="text-sm no-underline transition-colors"
+                  style={{
+                    color: isActive ? "var(--gray-900)" : "var(--gray-600)",
+                    fontWeight: isActive ? 500 : 400,
+                    textDecoration: "none",
+                  }}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
     </header>
   );
 }

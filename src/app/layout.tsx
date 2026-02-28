@@ -26,10 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html 
-      lang="en" 
-      suppressHydrationWarning
-      className="dark">
+    <html
+      lang="en"
+      suppressHydrationWarning>
       <head>
         <link rel="icon" href="/EK.png" type="image/png" />
       </head>
