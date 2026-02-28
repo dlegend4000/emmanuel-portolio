@@ -23,7 +23,7 @@ export default function ThemeToggle() {
       className="expand-btn"
       style={{ padding: "0 0.4rem", fontSize: "0.8rem" }}
     >
-      {isDark ? "☀" : "☽"}
+      {isDark ? "○" : "●"}
     </button>
   );
 }
