@@ -2,6 +2,14 @@ import Layout from "@/components/layout";
 
 const pressArticles = [
   {
+    title: "Irish AI start-up targets missed calls and lost revenue in trades",
+    publication: "The Irish Times",
+    date: "March 19, 2026",
+    url: "https://www.irishtimes.com/business/innovation/2026/03/19/irish-ai-start-up-targets-missed-calls-and-lost-revenue-in-trades/",
+    excerpt:
+      "CallCrewAI, an autonomous AI operating system founded by Adelin Diac and Emmanuel Karibiye, automates back-office operations for trades and field service companies by handling 24/7 customer calls, job booking, and quote follow-ups.",
+  },
+  {
     title:
       "Think global from day one – Dundalk duo return from Silicon Valley with bold plans for AI venture",
     publication: "Irish Independent",
