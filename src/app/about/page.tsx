@@ -7,7 +7,7 @@ const experience = [
     role: "Co-founder & CTO",
     company: "CallCrewAI",
     url: "https://www.callcrew-ai.com/",
-    period: "August 2025 — Present",
+    period: "January 2026 — Present",
     bullets: [
       "Architecting and executing technical strategy for an AI-powered platform serving trades, facilities, and field-service businesses.",
       "Leading full-stack development, infrastructure scaling, and AI/ML integration to deliver 24/7 automated solutions.",
@@ -18,7 +18,7 @@ const experience = [
     role: "Production Engineer Fellow",
     company: "Meta × MLH",
     url: "https://fellowship.mlh.io/",
-    period: "June 2025 — Present",
+    period: "June 2025 — September 2025",
     bullets: [
       "Production engineering projects under the guidance of Meta engineers and mentors.",
       "Less than 2.5% acceptance rate.",
@@ -124,7 +124,7 @@ export default function AboutPage() {
               I'm passionate about artificial intelligence, LLMs, full-stack development, reinforcement learning, and UI/UX design. I enjoy exploring how technology intersects with creativity and real-world problems.
             </p>
             <p>
-              Outside of work I'm into fashion, music, and sports. I play piano and guitar, and I never miss a chance to get out on the football pitch.
+              Outside of work I'm into fashion, music, and sports. I play piano and guitar.
             </p>
             <p>
               If you'd like to work together, reach me through my{" "}

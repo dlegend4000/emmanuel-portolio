@@ -66,8 +66,8 @@ export default function CoverflowGallery() {
   const getItemStyle = (index: number) => {
     const diff = index - activeIndex;
     const absD = Math.abs(diff);
-    const translateX = diff * 100;
-    const translateZ = -absD * 80;
+    const translateX = diff * 150;
+    const translateZ = -absD * 120;
     const rotateY = diff * -35;
     const zIndex = galleryImages.length - absD;
     const opacity = absD > 2 ? 0.3 : 1 - absD * 0.2;
@@ -180,8 +180,8 @@ export default function CoverflowGallery() {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={140}
-                  height={140}
+                  width={220}
+                  height={220}
                   className="w-full h-full object-cover"
                   loading={index === activeIndex ? "eager" : "lazy"}
                 />

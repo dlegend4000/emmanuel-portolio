@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { blogPosts } from "@/content/blog-data";
 import CoverflowGallery from "@/components/CoverflowGallery";
@@ -33,7 +33,7 @@ function useCurrentTime() {
 }
 
 export default function Home() {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const currentTime = useCurrentTime();
   const latestPosts = blogPosts.slice(0, 3);
 
@@ -99,21 +99,8 @@ export default function Home() {
                 className="text-sm leading-relaxed pt-2"
                 style={{ color: "var(--gray-600)" }}
               >
-                See my{" "}
-                <Link href="/projects" className="pill-link">
-                  projects
-                </Link>
-                . Read the{" "}
-                <Link href="/blog" className="pill-link">
-                  blog
-                </Link>
-                . Or reach me through{" "}
-                <Link href="/contact" className="pill-link">
-                  email
-                </Link>
-                .
+                I'm obsessed with the context problem in agentic AI: agents still can't hold coherent state across long horizons, fragmented tools, and unstructured multimodal input. Trades operations is the production-grade stress test. It is multi-channel, multi-system, and physically consequential.
               </p>
-
               {/* Expandable content */}
               <div className="pt-5">
                 <button
@@ -133,7 +120,7 @@ export default function Home() {
                       padding: "0.75rem 1rem",
                     }}
                   >
-                    Hackeurope Grand Winner, more wins include (ElevenLabs, JP Morgan, NDRC etc.), Meta Fellow, Web Summit Scholar. See the full{" "}
+                    Hackeurope Grand Winner, more wins include (ElevenLabs, Stripe, JP Morgan, NDRC etc.) See the full{" "}
                     <Link href="/about" className="pill-link">about</Link>
                     , my{" "}
                     <Link href="/projects" className="pill-link">projects</Link>
